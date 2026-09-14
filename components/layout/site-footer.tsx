@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/brand/logo";
-import { company, navLinks, solutions } from "@/lib/content";
+import { company, footerExtraLinks, navLinks, solutions } from "@/lib/content";
 import { Separator } from "@/components/ui/separator";
 
 export function SiteFooter() {
@@ -47,7 +47,7 @@ export function SiteFooter() {
 
         <div>
           <h3 className="font-heading text-sm font-semibold tracking-wide text-primary">
-            Contact
+            Company
           </h3>
           <ul className="mt-4 space-y-2 text-sm text-navy-foreground/75">
             <li>
@@ -62,6 +62,13 @@ export function SiteFooter() {
                 </a>
               </li>
             ))}
+            {footerExtraLinks.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="hover:text-primary">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
             <li>
               <a
                 href={company.linkedin}
@@ -72,14 +79,15 @@ export function SiteFooter() {
                 LinkedIn
               </a>
             </li>
-            <li>{company.location}</li>
           </ul>
         </div>
       </div>
 
       <Separator className="bg-white/10" />
       <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-6 text-xs text-navy-foreground/50 sm:flex-row sm:items-center sm:justify-between sm:px-6">
-        <p>© {new Date().getFullYear()} {company.name}. All rights reserved.</p>
+        <p>
+          © {new Date().getFullYear()} {company.name}. All rights reserved.
+        </p>
         <p>{company.tagline}</p>
       </div>
     </footer>

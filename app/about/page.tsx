@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/reveal";
 import { HoverLift } from "@/components/motion/hover-lift";
 import { CtaBand } from "@/components/sections/cta-band";
+import { FounderSpotlight } from "@/components/sections/founder-spotlight";
 import { PageHero } from "@/components/sections/page-hero";
 import {
   SectionEyebrow,
@@ -12,7 +13,7 @@ import { aboutValues, company, whyUs } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "About",
-  description: `About ${company.name} — a software house for fleet, GPS, and logistics in ${company.location}.`,
+  description: `About ${company.name} and founder Darab Khan — a software house for fleet, GPS, AI, and logistics in ${company.location}.`,
 };
 
 export default function AboutPage() {
@@ -23,6 +24,8 @@ export default function AboutPage() {
         title={company.tagline}
         description={company.description}
       />
+
+      <FounderSpotlight />
 
       <section className="surface-ice py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -66,7 +69,7 @@ export default function AboutPage() {
                       Focus
                     </dt>
                     <dd className="mt-1 font-heading text-lg font-semibold">
-                      Software house for fleet, GPS & logistics
+                      Software house for fleet, GPS & AI
                     </dd>
                   </div>
                 </dl>

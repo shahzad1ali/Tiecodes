@@ -38,6 +38,20 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: company.name,
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: `${company.name} — fleet, GPS, and logistics software`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: company.name,
+    description: company.headline,
+    images: ["/og.png"],
   },
 };
 

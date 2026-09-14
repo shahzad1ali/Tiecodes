@@ -12,14 +12,99 @@ export const company = {
   website: "https://tiecodes.com",
   employees: "11–50",
   repeatClients: "80%+",
+  founded: "2023",
+  responseTime: "We reply within 24 hours.",
+} as const;
+
+export const founder = {
+  name: "Darab Khan",
+  role: "CEO & Founder",
+  location: "Lahore, Punjab, Pakistan",
+  photo: "/brand/darab-khan.png",
+  linkedin: "https://www.linkedin.com/in/darab-khan-26b8841b4",
+  bio: "Darab leads TieCodes as a software house focused on fleet, GPS, and logistics platforms — combining product engineering with practical AI so operators get tools that fit how teams actually work on the road.",
+  education: [
+    {
+      school: "Lahore University of Management Sciences (LUMS)",
+      detail: "MS, Artificial Intelligence",
+      years: "2024 – 2026 (Expected)",
+    },
+    {
+      school: "The University of Lahore",
+      detail: "Software Engineering",
+      years: "2017 – 2021",
+    },
+  ],
+  experience: [
+    {
+      title: "CEO & Founder",
+      org: "TieCodes",
+      years: "Jan 2023 – Present",
+    },
+    {
+      title: "Sr. Software Engineer",
+      org: "Code District",
+      years: "Feb 2022 – Oct 2022",
+    },
+  ],
 } as const;
 
 export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/solutions", label: "Solutions" },
   { href: "/services", label: "Services" },
+  { href: "/insights", label: "Insights" },
+  { href: "/demo", label: "Demo" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
+] as const;
+
+export const footerExtraLinks = [
+  { href: "/engagement", label: "Engagement" },
+  { href: "/privacy", label: "Privacy" },
+  { href: "/terms", label: "Terms" },
+] as const;
+
+export const testimonials = [
+  {
+    quote:
+      "Dispatch used to live in spreadsheets and WhatsApp. TieCodes built a platform our managers actually use — tracking, jobs, and reports in one place.",
+    role: "Fleet Operations Lead",
+    region: "Gulf region",
+  },
+  {
+    quote:
+      "We needed a white-label load board we own, not another per-load fee platform. The custom board and GPS visibility changed how we work with carriers.",
+    role: "Freight Broker",
+    region: "South Asia",
+  },
+  {
+    quote:
+      "Driver apps and live tracking cut the phone chaos. Clear POD and alerts mean fewer disputes and faster handoffs.",
+    role: "Courier Network Manager",
+    region: "Pakistan",
+  },
+] as const;
+
+export const engagementModels = [
+  {
+    title: "Fixed price",
+    summary: "Scoped MVP or feature set with a clear deliverable and timeline.",
+    bestFor: "Well-defined products: driver app MVP, tracking dashboard, load board v1.",
+    timeline: "Typically 6–14 weeks depending on scope",
+  },
+  {
+    title: "Time & materials",
+    summary: "Flexible engagement when requirements evolve as you learn from users.",
+    bestFor: "Ongoing product iteration, integrations, and AI/ops experiments.",
+    timeline: "Monthly cycles with transparent burn",
+  },
+  {
+    title: "Dedicated team",
+    summary: "A focused squad embedded with your roadmap for continuous delivery.",
+    bestFor: "Scale-ups needing steady velocity across web, mobile, and APIs.",
+    timeline: "Quarterly commitments, sprint cadence",
+  },
 ] as const;
 
 export const fleetChallenges = [
