@@ -434,7 +434,7 @@ export const techStack = [
 
 export const whyUs = [
   {
-    title: "Software house, not a template shop",
+    title: "Software house",
     description:
       "We design and ship custom platforms — white-label when you need ownership, tailored when your process is unique.",
   },
