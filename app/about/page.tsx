@@ -46,7 +46,7 @@ export default function AboutPage() {
             </Reveal>
 
             <Reveal delay={0.1}>
-              <div className="rounded-2xl border border-primary/20 bg-gradient-to-br from-navy via-[#12263d] to-[#0a1628] p-6 text-navy-foreground sm:p-8">
+              <div className="rounded-2xl border border-primary/20 bg-gradient-to-br from-[#1e293b] via-[#233f69] to-[#1e293b] p-6 text-navy-foreground sm:p-8">
                 <dl className="space-y-6">
                   <div>
                     <dt className="text-xs font-semibold tracking-wide text-primary uppercase">

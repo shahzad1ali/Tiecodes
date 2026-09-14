@@ -15,7 +15,7 @@ export function TechStackSection() {
         className="pointer-events-none absolute inset-0 opacity-[0.08]"
         style={{
           backgroundImage:
-            "radial-gradient(circle at 1px 1px, #2eb7e5 1px, transparent 0)",
+            "radial-gradient(circle at 1px 1px, #3B82F6 1px, transparent 0)",
           backgroundSize: "28px 28px",
         }}
         aria-hidden

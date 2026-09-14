@@ -23,7 +23,7 @@ export function PageHero({
         className="pointer-events-none absolute inset-0 opacity-[0.06]"
         style={{
           backgroundImage:
-            "linear-gradient(to right, #2eb7e5 1px, transparent 1px), linear-gradient(to bottom, #2eb7e5 1px, transparent 1px)",
+            "linear-gradient(to right, #3B82F6 1px, transparent 1px), linear-gradient(to bottom, #3B82F6 1px, transparent 1px)",
           backgroundSize: "48px 48px",
         }}
       />

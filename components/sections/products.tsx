@@ -22,7 +22,7 @@ export function ProductsSection() {
         className="pointer-events-none absolute inset-0 opacity-[0.07]"
         style={{
           backgroundImage:
-            "linear-gradient(to right, #2eb7e5 1px, transparent 1px), linear-gradient(to bottom, #2eb7e5 1px, transparent 1px)",
+            "linear-gradient(to right, #3B82F6 1px, transparent 1px), linear-gradient(to bottom, #3B82F6 1px, transparent 1px)",
           backgroundSize: "52px 52px",
           maskImage: "linear-gradient(to bottom, black, transparent 90%)",
         }}
@@ -46,7 +46,7 @@ export function ProductsSection() {
               <HoverLift>
                 <Link
                   href={`/solutions/${featured.slug}`}
-                  className="group relative flex h-full min-h-[300px] flex-col justify-between overflow-hidden rounded-2xl border border-primary/25 bg-gradient-to-br from-[#14304a] via-[#0f2238] to-[#0a1628] p-8 sm:p-10"
+                  className="group relative flex h-full min-h-[300px] flex-col justify-between overflow-hidden rounded-2xl border border-primary/25 bg-gradient-to-br from-[#1f3b6d] via-[#2c5aa5] to-[#1e293b] p-8 sm:p-10"
                 >
                   <div className="pointer-events-none absolute -right-10 top-0 size-64 rounded-full bg-primary/25 blur-3xl transition-opacity group-hover:opacity-100" />
                   <div className="pointer-events-none absolute bottom-0 left-0 size-40 rounded-full bg-accent/15 blur-3xl" />

@@ -51,67 +51,67 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-/* Tie Signal — LinkedIn-aligned cyan + navy */
+/* TieCodes software-house palette */
 :root {
-  --background: #f5f8fc;
-  --foreground: #0b1b2b;
+  --background: #ffffff;
+  --foreground: #111827;
   --card: #ffffff;
-  --card-foreground: #0b1b2b;
+  --card-foreground: #111827;
   --popover: #ffffff;
-  --popover-foreground: #0b1b2b;
-  --primary: #2eb7e5;
-  --primary-foreground: #041018;
-  --secondary: #e8f0f7;
-  --secondary-foreground: #0b1b2b;
-  --muted: #eef3f8;
-  --muted-foreground: #5b6b7c;
-  --accent: #f5a524;
-  --accent-foreground: #1a1205;
+  --popover-foreground: #111827;
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+  --secondary: #dbeafe;
+  --secondary-foreground: #111827;
+  --muted: #f6f9fc;
+  --muted-foreground: #6b7280;
+  --accent: #60a5fa;
+  --accent-foreground: #111827;
   --destructive: #dc2626;
-  --border: #d8e2ec;
-  --input: #d8e2ec;
-  --ring: #2eb7e5;
-  --navy: #0a1628;
-  --navy-foreground: #e8eef7;
-  --route: #f5a524;
-  --chart-1: #2eb7e5;
-  --chart-2: #0a1628;
-  --chart-3: #f5a524;
-  --chart-4: #5b6b7c;
-  --chart-5: #121e32;
+  --border: #e5e7eb;
+  --input: #e5e7eb;
+  --ring: #3b82f6;
+  --navy: #1e293b;
+  --navy-foreground: #ffffff;
+  --route: #60a5fa;
+  --chart-1: #3b82f6;
+  --chart-2: #1e293b;
+  --chart-3: #60a5fa;
+  --chart-4: #94a3b8;
+  --chart-5: #111827;
   --radius: 0.625rem;
   --sidebar: #ffffff;
-  --sidebar-foreground: #0b1b2b;
-  --sidebar-primary: #2eb7e5;
-  --sidebar-primary-foreground: #041018;
-  --sidebar-accent: #eef3f8;
-  --sidebar-accent-foreground: #0b1b2b;
-  --sidebar-border: #d8e2ec;
-  --sidebar-ring: #2eb7e5;
+  --sidebar-foreground: #111827;
+  --sidebar-primary: #3b82f6;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f6f9fc;
+  --sidebar-accent-foreground: #111827;
+  --sidebar-border: #e5e7eb;
+  --sidebar-ring: #3b82f6;
 }
 
 .dark {
-  --background: #0a1628;
-  --foreground: #e8eef7;
-  --card: #121e32;
-  --card-foreground: #e8eef7;
-  --popover: #121e32;
-  --popover-foreground: #e8eef7;
-  --primary: #2eb7e5;
-  --primary-foreground: #041018;
-  --secondary: #1a273c;
-  --secondary-foreground: #e8eef7;
-  --muted: #1a273c;
-  --muted-foreground: #8b9bb4;
-  --accent: #f5a524;
-  --accent-foreground: #1a1205;
+  --background: #111827;
+  --foreground: #f8fafc;
+  --card: #1f2937;
+  --card-foreground: #f8fafc;
+  --popover: #1f2937;
+  --popover-foreground: #f8fafc;
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+  --secondary: #1e293b;
+  --secondary-foreground: #f8fafc;
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+  --accent: #60a5fa;
+  --accent-foreground: #111827;
   --destructive: #f87171;
-  --border: #243049;
-  --input: #243049;
-  --ring: #2eb7e5;
-  --navy: #0a1628;
-  --navy-foreground: #e8eef7;
-  --route: #f5a524;
+  --border: #334155;
+  --input: #334155;
+  --ring: #3b82f6;
+  --navy: #1e293b;
+  --navy-foreground: #ffffff;
+  --route: #60a5fa;
 }
 
 @layer base {
@@ -139,83 +139,83 @@
 
   .hero-grid {
     background-image:
-      linear-gradient(to right, rgb(46 183 229 / 0.08) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(46 183 229 / 0.08) 1px, transparent 1px);
+      linear-gradient(to right, rgb(59 130 246 / 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(59 130 246 / 0.08) 1px, transparent 1px);
     background-size: 48px 48px;
   }
 
   .hero-glow {
     background:
-      radial-gradient(ellipse 80% 50% at 70% 40%, rgb(46 183 229 / 0.22), transparent 60%),
-      radial-gradient(ellipse 50% 40% at 20% 80%, rgb(245 165 36 / 0.12), transparent 55%),
-      linear-gradient(160deg, #06101c 0%, #0a1628 45%, #0d1f38 100%);
+      radial-gradient(ellipse 80% 50% at 70% 40%, rgb(96 165 250 / 0.22), transparent 60%),
+      radial-gradient(ellipse 50% 40% at 20% 80%, rgb(59 130 246 / 0.12), transparent 55%),
+      linear-gradient(160deg, #0f172a 0%, #1e293b 45%, #2563eb 100%);
   }
 
   /* Below-hero section atmospheres (hero untouched) */
   .surface-mist {
     background:
-      radial-gradient(ellipse 80% 60% at 0% 0%, rgb(46 183 229 / 0.12), transparent 55%),
-      radial-gradient(ellipse 50% 40% at 100% 100%, rgb(14 116 144 / 0.08), transparent 50%),
-      linear-gradient(180deg, #f7fbfe 0%, #eef5fa 100%);
+      radial-gradient(ellipse 80% 60% at 0% 0%, rgb(96 165 250 / 0.16), transparent 55%),
+      radial-gradient(ellipse 50% 40% at 100% 100%, rgb(59 130 246 / 0.08), transparent 50%),
+      linear-gradient(180deg, #ffffff 0%, #f6f9fc 100%);
   }
 
   .surface-slate {
     background:
-      radial-gradient(ellipse 70% 50% at 100% 0%, rgb(46 183 229 / 0.18), transparent 55%),
-      linear-gradient(165deg, #0c1a2e 0%, #12263d 48%, #0a1628 100%);
+      radial-gradient(ellipse 70% 50% at 100% 0%, rgb(96 165 250 / 0.2), transparent 55%),
+      linear-gradient(165deg, #1e293b 0%, #243b5b 48%, #1e293b 100%);
   }
 
   .surface-dawn {
     background:
-      radial-gradient(ellipse 60% 45% at 15% 20%, rgb(245 165 36 / 0.1), transparent 50%),
-      radial-gradient(ellipse 55% 50% at 90% 80%, rgb(46 183 229 / 0.1), transparent 55%),
-      linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+      radial-gradient(ellipse 60% 45% at 15% 20%, rgb(96 165 250 / 0.12), transparent 50%),
+      radial-gradient(ellipse 55% 50% at 90% 80%, rgb(59 130 246 / 0.1), transparent 55%),
+      linear-gradient(180deg, #ffffff 0%, #f6f9fc 100%);
   }
 
   .surface-ice {
     background:
-      linear-gradient(135deg, #e8f4fb 0%, #f4f9fc 42%, #eef6fb 100%);
+      linear-gradient(135deg, #f6f9fc 0%, #ffffff 42%, #dbeafe 100%);
   }
 
   .surface-ink {
     background:
-      radial-gradient(ellipse 65% 55% at 85% 15%, rgb(46 183 229 / 0.28), transparent 55%),
-      radial-gradient(ellipse 45% 40% at 10% 90%, rgb(245 165 36 / 0.14), transparent 50%),
-      linear-gradient(160deg, #07101c 0%, #0a1628 50%, #102438 100%);
+      radial-gradient(ellipse 65% 55% at 85% 15%, rgb(96 165 250 / 0.28), transparent 55%),
+      radial-gradient(ellipse 45% 40% at 10% 90%, rgb(59 130 246 / 0.14), transparent 50%),
+      linear-gradient(160deg, #0f172a 0%, #1e293b 50%, #1f3b6d 100%);
   }
 
   .panel-glass {
-    background: rgb(255 255 255 / 0.72);
-    border: 1px solid rgb(46 183 229 / 0.18);
+    background: rgb(255 255 255 / 0.74);
+    border: 1px solid rgb(59 130 246 / 0.18);
     box-shadow:
-      0 1px 0 rgb(255 255 255 / 0.8) inset,
-      0 18px 40px -28px rgb(10 22 40 / 0.35);
+      0 1px 0 rgb(255 255 255 / 0.85) inset,
+      0 18px 40px -28px rgb(30 41 59 / 0.35);
     backdrop-filter: blur(12px);
   }
 
   .panel-glass-dark {
-    background: rgb(18 30 50 / 0.65);
-    border: 1px solid rgb(46 183 229 / 0.22);
-    box-shadow: 0 20px 48px -28px rgb(0 0 0 / 0.55);
+    background: rgb(30 41 59 / 0.68);
+    border: 1px solid rgb(96 165 250 / 0.22);
+    box-shadow: 0 20px 48px -28px rgb(15 23 42 / 0.6);
     backdrop-filter: blur(14px);
   }
 
   .panel-accent {
     background:
-      linear-gradient(145deg, rgb(255 255 255 / 0.95), rgb(232 244 251 / 0.9));
-    border: 1px solid rgb(46 183 229 / 0.2);
-    box-shadow: 0 16px 36px -28px rgb(10 22 40 / 0.28);
+      linear-gradient(145deg, rgb(255 255 255 / 0.96), rgb(219 234 254 / 0.92));
+    border: 1px solid rgb(59 130 246 / 0.2);
+    box-shadow: 0 16px 36px -28px rgb(30 41 59 / 0.28);
   }
 
   .icon-well {
-    background: linear-gradient(145deg, #0a1628, #14304a);
-    color: #2eb7e5;
-    box-shadow: 0 8px 20px -10px rgb(46 183 229 / 0.55);
+    background: linear-gradient(145deg, #1e293b, #243b5b);
+    color: #60a5fa;
+    box-shadow: 0 8px 20px -10px rgb(59 130 246 / 0.55);
   }
 
   .chip-glow {
-    border: 1px solid rgb(46 183 229 / 0.28);
-    background: linear-gradient(180deg, rgb(46 183 229 / 0.14), rgb(46 183 229 / 0.05));
+    border: 1px solid rgb(96 165 250 / 0.28);
+    background: linear-gradient(180deg, rgb(96 165 250 / 0.14), rgb(59 130 246 / 0.05));
   }
 
   @media (prefers-reduced-motion: reduce) {

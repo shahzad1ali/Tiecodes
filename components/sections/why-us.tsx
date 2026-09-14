@@ -15,7 +15,7 @@ export function WhyUsSection() {
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.15fr] lg:items-start">
           <Reveal>
-            <div className="rounded-3xl border border-primary/20 bg-gradient-to-br from-navy via-[#102438] to-[#0a1628] p-8 text-navy-foreground shadow-[0_24px_60px_-36px_rgb(10_22_40_/_0.7)] sm:p-10">
+            <div className="rounded-3xl border border-primary/20 bg-gradient-to-br from-[#1e293b] via-[#233f69] to-[#1e293b] p-8 text-navy-foreground shadow-[0_24px_60px_-36px_rgb(10_22_40_/_0.7)] sm:p-10">
               <SectionEyebrow>Why {company.name}</SectionEyebrow>
               <SectionHeading className="text-navy-foreground">
                 A partner that builds software you can grow on
@@ -63,7 +63,7 @@ export function WhyUsSection() {
                     className={`h-full rounded-2xl p-6 ${
                       i % 2 === 0
                         ? "panel-glass"
-                        : "border border-primary/20 bg-gradient-to-br from-white to-[#dff1fa]"
+                        : "border border-primary/20 bg-gradient-to-br from-white to-[#dbeafe]"
                     }`}
                   >
                     <div
