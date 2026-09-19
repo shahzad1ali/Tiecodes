@@ -21,12 +21,13 @@ export function CapabilitiesSection() {
         <Reveal>
           <SectionEyebrow>Software house</SectionEyebrow>
           <SectionHeading>
-            Engineering products that keep businesses moving
+            Product engineering for web, mobile, and operations teams
           </SectionHeading>
           <SectionLead>
-            TieCodes is a software development company specializing in custom
-            platforms for fleet, logistics, and operations — from discovery to
-            launch.
+            TieCodes builds custom business software for fleet operations,
+            service marketplaces, booking systems, and digital workflows — with
+            the clarity of a modern product team and the depth of a logistics
+            specialist.
           </SectionLead>
         </Reveal>
 

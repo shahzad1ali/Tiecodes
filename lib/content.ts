@@ -2,9 +2,9 @@ export const company = {
   name: "TieCodes",
   wordmark: "TieCodes",
   tagline: "innovate.connect.inspire.",
-  headline: "Building the Tech Behind Modern Fleet & Logistics Operations",
+  headline: "Building software for fleet, field service, and operational workflows",
   description:
-    "TieCodes is a software house that designs custom apps and platforms for fleet, logistics, GPS tracking, driver operations — and AI-assisted intelligence that helps teams decide faster.",
+    "TieCodes is a software house creating custom web applications, mobile apps, GPS platforms, SaaS dashboards, and workflow systems for logistics, field operations, service marketplaces, and digital business growth.",
   location: "Lahore, Punjab, Pakistan",
   email: "info@tiecodes.com",
   phones: ["+92 308 612 2231", "+92 321 4086550"],
@@ -22,7 +22,7 @@ export const founder = {
   location: "Lahore, Punjab, Pakistan",
   photo: "/brand/darab-khan.png",
   linkedin: "https://www.linkedin.com/in/darab-khan-26b8841b4",
-  bio: "Darab leads TieCodes as a software house focused on fleet, GPS, and logistics platforms — combining product engineering with practical AI so operators get tools that fit how teams actually work on the road.",
+  bio: "Darab leads TieCodes as a software house building custom web platforms, mobile apps, GPS systems, and logistics technology — combining product engineering with practical AI so businesses get tools that fit how teams actually work.",
   education: [
     {
       school: "Lahore University of Management Sciences (LUMS)",
@@ -199,7 +199,10 @@ export type SolutionSlug =
   | "gps-tracking"
   | "driver-apps"
   | "taxi-booking"
-  | "load-board";
+  | "load-board"
+  | "web-portals"
+  | "service-marketplace"
+  | "saas-dashboard";
 
 export type Solution = {
   slug: SolutionSlug;
@@ -365,6 +368,64 @@ export const solutions: Solution[] = [
     ],
     icon: "ClipboardList",
   },
+  {
+    slug: "web-portals",
+    title: "Business Web Portals",
+    shortTitle: "Web Portals",
+    summary:
+      "Client portals, dashboards, operations hubs, and custom web products designed for visibility and growth.",
+    headline: "Web products that turn operations into simple, scalable systems.",
+    problem:
+      "Many teams lose time to fragmented tools, manual admin work, and unclear reporting. A custom web portal brings your workflows into one system your team can trust.",
+    features: [
+      "Custom login and role-based access",
+      "Operations dashboards and KPIs",
+      "Customer and employee portals",
+      "Workflow automation and approvals",
+      "Document management and file uploads",
+      "Data reports, exports, and analytics",
+      "API integrations with internal systems",
+      "Responsive web experience across devices",
+      "SEO-friendly business pages and landing pages",
+      "Scalable architecture for future growth",
+    ],
+    whoBenefits: [
+      "Service businesses",
+      "B2B operators",
+      "Startup teams",
+      "Digital-first companies",
+    ],
+    icon: "Globe",
+  },
+  {
+    slug: "saas-dashboard",
+    title: "SaaS Dashboard Systems",
+    shortTitle: "SaaS",
+    summary:
+      "Modern dashboards, reporting layers, and product platforms built for visibility, control, and scale.",
+    headline: "Turn your data into decisions your team can act on.",
+    problem:
+      "Without a clear product dashboard, teams rely on manual reporting and guesswork. SaaS dashboards replace that with real-time insight and operational control.",
+    features: [
+      "Executive and operational dashboards",
+      "Live analytics and KPI widgets",
+      "Admin control panels and permissions",
+      "Custom reporting and filtered views",
+      "Integrations with CRMs, ERP, and APIs",
+      "Notifications and alerts",
+      "Scalable reporting architecture",
+      "User journey and engagement insights",
+      "Multi-tenant support",
+      "White-label design and branding",
+    ],
+    whoBenefits: [
+      "Product companies",
+      "Agencies",
+      "Operations teams",
+      "Scaling businesses",
+    ],
+    icon: "LayoutDashboard",
+  },
 ];
 
 export function getSolution(slug: string): Solution | undefined {
@@ -374,23 +435,33 @@ export function getSolution(slug: string): Solution | undefined {
 export const services = [
   {
     title: "Custom Software Development",
-    description: "Business solutions tailored to how your operations actually run.",
+    description: "Tailored business software for web, mobile, operations, and internal systems built around your workflow.",
     icon: "Code2",
   },
   {
-    title: "Mobile App Development",
-    description: "Android and iOS apps for drivers, riders, managers, and field teams.",
-    icon: "Smartphone",
-  },
-  {
-    title: "Web Platforms",
-    description: "Fast, modern dashboards and customer-facing web applications.",
+    title: "Web Development",
+    description: "Responsive business websites, customer portals, dashboards, and scalable web applications designed for growth.",
     icon: "Globe",
   },
   {
+    title: "Mobile App Development",
+    description: "Android and iOS apps for drivers, field teams, managers, and customers with live updates, tracking, and real-time workflows.",
+    icon: "Smartphone",
+  },
+  {
+    title: "SaaS & Dashboard Systems",
+    description: "Custom admin panels, operational dashboards, and software products that give teams visibility, control, and reporting.",
+    icon: "LayoutDashboard",
+  },
+  {
     title: "Fleet & Logistics Systems",
-    description: "Fleet management, trucking, freight forwarding, and parcel tracking.",
+    description: "Fleet management, trucking, freight forwarding, and parcel tracking built around GPS-aware workflows.",
     icon: "Truck",
+  },
+  {
+    title: "Marketplace & Service Portals",
+    description: "Provider and installer workflows with job creation, proposals, assignment, agreement verification, and completion tracking.",
+    icon: "ClipboardList",
   },
   {
     title: "GPS & Employee Tracking",
@@ -439,63 +510,74 @@ export const aboutValues = [
   },
 ] as const;
 
-/** Software-house capabilities shown below the hero */
 export const capabilities = [
   {
     title: "Custom Product Engineering",
     description:
-      "End-to-end web and backend systems shaped around your workflows — not off-the-shelf templates.",
+      "End-to-end software built around your workflows — from web apps and dashboards to field-service and booking platforms that actually match business operations.",
     icon: "Code2",
+  },
+  {
+    title: "Web App & Portal Development",
+    description:
+      "Business portals, customer experiences, admin dashboards, and internal tools designed for usability, visibility, and growth across teams.",
+    icon: "Globe",
   },
   {
     title: "Mobile Apps for the Road",
     description:
-      "Driver, rider, and manager apps on Android and iOS with live jobs, tracking, and POD.",
+      "Android and iOS apps for drivers, field teams, customers, and managers with job updates, assignments, GPS views, and task status tracking.",
     icon: "Smartphone",
+  },
+  {
+    title: "Marketplace & Service Workflows",
+    description:
+      "Provider and installer portals with job creation, bidding, assignment, agreements, verification, completion, and mutual review built into one process.",
+    icon: "ClipboardList",
   },
   {
     title: "GPS & Fleet Platforms",
     description:
-      "Real-time maps, geofencing, dispatch, and analytics built for logistics operations.",
+      "Real-time maps, geofencing, dispatch, and analytics for logistics operations, tracking systems, and live route visibility.",
     icon: "Radar",
   },
   {
     title: "AI for Operations",
     description:
-      "Route suggestions, anomaly alerts, demand signals, and smart dispatch assistance woven into your product.",
+      "Assignments, alerts, recommendations, and smart dispatch support that help teams act faster without losing transparency.",
     icon: "Brain",
   },
   {
     title: "Integrations & APIs",
     description:
-      "Payment gateways, maps, load boards, and REST APIs that connect your stack cleanly.",
+      "Payment gateways, maps, service APIs, and internal data flows connected cleanly so your product works as a system, not a patchwork.",
     icon: "Link2",
   },
 ] as const;
 
 export const aiCapabilities = [
   {
-    title: "Intelligent route assistance",
+    title: "Job assignment intelligence",
     description:
-      "Recommend better paths using live traffic, history, and delivery windows — fewer miles, fewer delays.",
+      "Recommend matching providers, installers, or drivers based on location, response time, and workload to speed up approval and reduce delays.",
     icon: "Sparkles",
   },
   {
-    title: "Anomaly & risk alerts",
+    title: "Agreement & verification checks",
     description:
-      "Flag unusual stops, fuel spikes, or safety patterns so ops can act before issues become costs.",
+      "Flag missing documents, terms mismatch, or incomplete confirmation steps before work begins to keep service workflows compliant and accountable.",
     icon: "Bot",
   },
   {
     title: "Smart dispatch support",
     description:
-      "Match jobs to drivers with context — skills, location, ETA — instead of guessing from chats.",
+      "Route jobs to the right team with context — availability, skills, location, and status — instead of chaotic manual assignment.",
     icon: "Cpu",
   },
   {
-    title: "Operational insights",
+    title: "Completion & rating insights",
     description:
-      "Turn tracking and trip data into clear recommendations your managers can trust.",
+      "Track job completion, ongoing quality, and mutual review data so teams can improve service performance and trust.",
     icon: "Brain",
   },
 ] as const;
@@ -503,12 +585,15 @@ export const aiCapabilities = [
 export const techStack = [
   "React",
   "Next.js",
+  "React Native",
   "Flutter",
   "Python / Django",
   "PHP / Laravel",
   "Node.js",
   "MySQL",
+  "PostgreSQL",
   "REST APIs",
+  "Webhooks",
   "Google Maps",
   "GPS / Telematics",
   "AI / ML",

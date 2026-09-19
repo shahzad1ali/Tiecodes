@@ -30,12 +30,12 @@ export function AiIntelligenceSection() {
           <Reveal>
             <SectionEyebrow>AI intelligence</SectionEyebrow>
             <SectionHeading className="text-navy-foreground">
-              AI that helps fleets decide — not just display data
+              Workflow intelligence for service teams, fleets, and platform ops
             </SectionHeading>
             <SectionLead className="text-navy-foreground/65">
-              TieCodes layers practical AI into logistics products: smarter
-              routing hints, anomaly alerts, and dispatch assistance — custom
-              to your operations.
+              TieCodes layers practical AI into operational products: smarter
+              assignment recommendations, agreement checks, completion tracking,
+              and business signals that turn workflows into clear decisions.
             </SectionLead>
 
             <Stagger className="mt-8 grid gap-3 sm:grid-cols-2">

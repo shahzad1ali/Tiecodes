@@ -32,11 +32,11 @@ export function ProductsSection() {
         <Reveal>
           <SectionEyebrow>Product platforms</SectionEyebrow>
           <SectionHeading className="text-navy-foreground">
-            Logistics software we design and ship
+            Custom web, mobile, and workflow software we design and ship
           </SectionHeading>
           <SectionLead className="text-navy-foreground/65">
-            Purpose-built platforms for fleets, drivers, brokers, and mobility —
-            owned by you, engineered by us.
+            Purpose-built platforms for fleets, service businesses, booking flows,
+            dashboards, and operational portals — owned by you, engineered by us.
           </SectionLead>
         </Reveal>
 

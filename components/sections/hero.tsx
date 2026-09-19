@@ -52,8 +52,9 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
         >
-          Custom fleet platforms, GPS tracking, driver apps, and AI-assisted
-          operations — software that keeps logistics moving.
+          Custom fleet systems, GPS tracking, web portals, mobile apps, and
+          workflow software for teams that need jobs, approvals, assignments,
+          and operational clarity in one place.
         </motion.p>
 
         <motion.div
