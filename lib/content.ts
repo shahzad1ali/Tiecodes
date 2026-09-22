@@ -439,6 +439,16 @@ export const services = [
     icon: "Code2",
   },
   {
+    title: "MVP Development",
+    description: "Launch-ready first versions that validate your idea quickly, attract early users, and create a clear path to scale.",
+    icon: "Rocket",
+  },
+  {
+    title: "Product Development",
+    description: "From product discovery and UX to architecture, delivery, analytics, and continuous improvement after launch.",
+    icon: "Layers3",
+  },
+  {
     title: "Web Development",
     description: "Responsive business websites, customer portals, dashboards, and scalable web applications designed for growth.",
     icon: "Globe",
@@ -481,8 +491,13 @@ export const services = [
   },
   {
     title: "E-Commerce Websites",
-    description: "SEO-friendly online stores built for growth.",
+    description: "SEO-friendly online stores, catalogs, checkout flows, payments, and back-office tools built for growth.",
     icon: "ShoppingBag",
+  },
+  {
+    title: "Google & Third-Party Integrations",
+    description: "Maps, Analytics, authentication, payments, messaging, and business APIs connected into one reliable product system.",
+    icon: "PlugZap",
   },
   {
     title: "SMM & Digital Consultancy",
@@ -552,6 +567,18 @@ export const capabilities = [
     description:
       "Payment gateways, maps, service APIs, and internal data flows connected cleanly so your product works as a system, not a patchwork.",
     icon: "Link2",
+  },
+  {
+    title: "MVP & Product Launches",
+    description:
+      "Focused first releases for founders and teams that need to test, learn, and launch without overbuilding.",
+    icon: "Rocket",
+  },
+  {
+    title: "E-Commerce & Growth",
+    description:
+      "Online stores, conversion-focused journeys, SEO foundations, and operational tooling for digital commerce.",
+    icon: "ShoppingBag",
   },
 ] as const;
 

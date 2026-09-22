@@ -9,6 +9,7 @@ import {
   SectionLead,
 } from "@/components/sections/section-heading";
 import { capabilities } from "@/lib/content";
+import { ButtonLink } from "@/components/ui/button-link";
 
 export function CapabilitiesSection() {
   return (
@@ -21,7 +22,7 @@ export function CapabilitiesSection() {
         <Reveal>
           <SectionEyebrow>Software house</SectionEyebrow>
           <SectionHeading>
-            Product engineering for web, mobile, and operations teams
+            What we build for ambitious teams
           </SectionHeading>
           <SectionLead>
             TieCodes builds custom business software for fleet operations,
@@ -32,7 +33,7 @@ export function CapabilitiesSection() {
         </Reveal>
 
         <Stagger className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-          {capabilities.map((item) => (
+          {capabilities.slice(0, 6).map((item) => (
             <StaggerItem key={item.title}>
               <HoverLift>
                 <div className="panel-glass group relative h-full overflow-hidden rounded-2xl p-6 transition-[border-color,box-shadow] hover:border-primary/45 hover:shadow-[0_22px_50px_-30px_rgb(46_183_229_/_0.55)]">
@@ -51,6 +52,12 @@ export function CapabilitiesSection() {
             </StaggerItem>
           ))}
         </Stagger>
+
+        <Reveal className="mt-10 flex justify-center sm:justify-start">
+          <ButtonLink href="/services" size="lg" variant="outline" className="h-11 px-5">
+            View all services
+          </ButtonLink>
+        </Reveal>
       </div>
     </section>
   );
