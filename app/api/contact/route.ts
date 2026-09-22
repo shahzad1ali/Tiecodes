@@ -1,12 +1,14 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { company } from "@/lib/content";
+import { isRateLimited } from "@/lib/rate-limit";
 
 type Body = {
   name?: string;
   email?: string;
   phone?: string;
   message?: string;
+  website?: string;
 };
 
 export async function POST(request: Request) {
@@ -21,6 +23,11 @@ export async function POST(request: Request) {
   const email = body.email?.trim() ?? "";
   const phone = body.phone?.trim() ?? "";
   const message = body.message?.trim() ?? "";
+  const website = body.website?.trim() ?? "";
+
+  const address = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
+  if (isRateLimited(`contact:${address}`, 5, 15 * 60 * 1000)) return NextResponse.json({ error: "Too many messages. Please try again later." }, { status: 429 });
+  if (website) return NextResponse.json({ ok: true });
 
   if (!name || !email || !message) {
     return NextResponse.json(
@@ -28,6 +35,7 @@ export async function POST(request: Request) {
       { status: 400 }
     );
   }
+  if (name.length > 120 || email.length > 254 || phone.length > 40 || message.length > 5000) return NextResponse.json({ error: "Please shorten the submitted details." }, { status: 400 });
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return NextResponse.json({ error: "Invalid email address." }, { status: 400 });
   }

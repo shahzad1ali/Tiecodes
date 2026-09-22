@@ -15,19 +15,19 @@ export function WhyUsSection() {
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.15fr] lg:items-start">
           <Reveal>
-            <div className="rounded-3xl border border-primary/20 bg-gradient-to-br from-[#1e293b] via-[#233f69] to-[#1e293b] p-8 text-navy-foreground shadow-[0_24px_60px_-36px_rgb(10_22_40_/_0.7)] sm:p-10">
+            <div className="rounded-3xl border border-primary/20 bg-gradient-to-br from-white via-[#f7fbff] to-[#e8f2ff] p-8 shadow-[0_24px_60px_-36px_rgb(37_66_102_/_0.2)] sm:p-10">
               <SectionEyebrow>Why {company.name}</SectionEyebrow>
-              <SectionHeading className="text-navy-foreground">
+              <SectionHeading>
                 A partner that builds software you can grow on
               </SectionHeading>
-              <SectionLead className="text-navy-foreground/65">
+              <SectionLead>
                 We combine product craft with logistics domain knowledge — so your
                 platform fits how teams actually work on the road and in the
                 office.
               </SectionLead>
 
               <dl className="mt-10 grid grid-cols-2 gap-6">
-                <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+                <div className="rounded-xl border border-primary/15 bg-white/70 p-4">
                   <dt className="text-xs font-semibold tracking-wide text-primary uppercase">
                     Repeat clients
                   </dt>
@@ -35,7 +35,7 @@ export function WhyUsSection() {
                     {company.repeatClients}
                   </dd>
                 </div>
-                <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+                <div className="rounded-xl border border-primary/15 bg-white/70 p-4">
                   <dt className="text-xs font-semibold tracking-wide text-accent uppercase">
                     Team
                   </dt>
@@ -43,7 +43,7 @@ export function WhyUsSection() {
                     {company.employees}
                   </dd>
                 </div>
-                <div className="col-span-2 rounded-xl border border-white/10 bg-white/5 p-4">
+                <div className="col-span-2 rounded-xl border border-primary/15 bg-white/70 p-4">
                   <dt className="text-xs font-semibold tracking-wide text-primary uppercase">
                     Headquarters
                   </dt>
@@ -63,7 +63,7 @@ export function WhyUsSection() {
                     className={`h-full rounded-2xl p-6 ${
                       i % 2 === 0
                         ? "panel-glass"
-                        : "border border-primary/20 bg-gradient-to-br from-white to-[#dbeafe]"
+                        : "border border-primary/20 bg-gradient-to-br from-white to-[#e8f2ff]"
                     }`}
                   >
                     <div

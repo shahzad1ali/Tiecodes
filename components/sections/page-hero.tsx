@@ -15,7 +15,7 @@ export function PageHero({
   return (
     <section
       className={cn(
-        "surface-slate relative overflow-hidden border-b border-primary/15 py-16 text-navy-foreground md:py-20",
+        "surface-slate relative overflow-hidden border-b border-primary/15 py-16 text-foreground md:py-20",
         className
       )}
     >
@@ -23,7 +23,7 @@ export function PageHero({
         className="pointer-events-none absolute inset-0 opacity-[0.06]"
         style={{
           backgroundImage:
-            "linear-gradient(to right, #3B82F6 1px, transparent 1px), linear-gradient(to bottom, #3B82F6 1px, transparent 1px)",
+            "linear-gradient(to right, #2563C7 1px, transparent 1px), linear-gradient(to bottom, #2563C7 1px, transparent 1px)",
           backgroundSize: "48px 48px",
         }}
       />
@@ -35,7 +35,7 @@ export function PageHero({
           <h1 className="mt-3 max-w-3xl font-heading text-3xl font-semibold tracking-tight text-balance sm:text-5xl">
             {title}
           </h1>
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-navy-foreground/70 sm:text-lg">
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
             {description}
           </p>
         </Reveal>

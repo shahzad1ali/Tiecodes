@@ -9,7 +9,7 @@ import type { Solution } from "@/lib/content";
 export function SolutionDetail({ solution }: { solution: Solution }) {
   return (
     <>
-      <section className="surface-slate relative overflow-hidden border-b border-primary/15 py-16 text-navy-foreground md:py-20">
+      <section className="surface-slate relative overflow-hidden border-b border-primary/15 py-16 text-foreground md:py-20">
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
           <Reveal>
             <Link
@@ -24,7 +24,7 @@ export function SolutionDetail({ solution }: { solution: Solution }) {
             <h1 className="mt-5 max-w-3xl font-heading text-3xl font-semibold tracking-tight text-balance sm:text-4xl md:text-5xl">
               {solution.headline}
             </h1>
-            <p className="mt-4 max-w-2xl text-lg text-navy-foreground/70">
+            <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
               {solution.problem}
             </p>
             <div className="mt-8">

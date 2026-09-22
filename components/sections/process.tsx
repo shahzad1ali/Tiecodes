@@ -33,7 +33,7 @@ export function ProcessSection() {
                   className={`relative z-10 inline-flex size-12 items-center justify-center rounded-full font-heading text-sm font-bold shadow-[0_0_0_6px_rgb(248_250_252)] ${
                     index === 0
                       ? "bg-accent text-accent-foreground"
-                      : "bg-navy text-primary"
+                      : "bg-primary/10 text-primary ring-1 ring-primary/20"
                   }`}
                 >
                   {step.step}

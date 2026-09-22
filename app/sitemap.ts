@@ -1,10 +1,11 @@
 import type { MetadataRoute } from "next";
 import { solutions } from "@/lib/content";
 import { insights } from "@/lib/insights";
+import { getProjects } from "@/lib/projects";
 
 const base = "https://tiecodes.com";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticRoutes = [
     "",
     "/solutions",
@@ -37,5 +38,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }));
 
-  return [...staticRoutes, ...solutionRoutes, ...insightRoutes];
+  let projectRoutes: MetadataRoute.Sitemap = [];
+  try {
+    const projects = await getProjects();
+    projectRoutes = projects.map((project) => ({
+      url: `${base}/projects/${project.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    }));
+  } catch {
+    projectRoutes = [];
+  }
+
+  return [...staticRoutes, ...solutionRoutes, ...insightRoutes, ...projectRoutes];
 }

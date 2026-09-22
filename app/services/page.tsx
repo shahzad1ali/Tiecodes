@@ -10,6 +10,7 @@ import {
   SectionLead,
 } from "@/components/sections/section-heading";
 import { capabilities, services, techStack } from "@/lib/content";
+import { ButtonLink } from "@/components/ui/button-link";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -78,11 +79,11 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="surface-ink py-16 text-navy-foreground md:py-20">
+      <section className="surface-ink py-16 text-foreground md:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <Reveal>
             <SectionEyebrow>Stack</SectionEyebrow>
-            <SectionHeading className="text-navy-foreground">
+            <SectionHeading>
               Tools we use to ship
             </SectionHeading>
           </Reveal>
@@ -97,6 +98,10 @@ export default function ServicesPage() {
           </Stagger>
         </div>
       </section>
+
+      <div className="mx-auto max-w-6xl px-4 py-10 text-center sm:px-6">
+        <ButtonLink href="/contact" size="lg">Discuss your project</ButtonLink>
+      </div>
 
       <CtaBand />
     </>

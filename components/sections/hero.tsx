@@ -12,10 +12,10 @@ export function HeroSection() {
   const reduce = useReducedMotion();
 
   return (
-    <section className="relative isolate min-h-[calc(100svh-4rem)] overflow-hidden bg-navy text-navy-foreground">
+    <section className="relative isolate min-h-[calc(100svh-4rem)] overflow-hidden bg-background text-foreground">
       <div className="hero-glow absolute inset-0" />
       <div className="hero-grid absolute inset-0 opacity-60" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-navy to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent" />
 
       {/* Unique geometric network art — no stock / LinkedIn photos */}
       <FleetNetworkArt className="pointer-events-none absolute inset-y-0 right-[-4%] hidden w-[52%] max-w-none opacity-70 md:block" />
@@ -32,13 +32,12 @@ export function HeroSection() {
             href={null}
             size="hero"
             showTagline
-            variant="on-dark"
             className="max-w-4xl"
           />
         </motion.div>
 
         <motion.h1
-          className="mt-8 max-w-2xl font-heading text-2xl font-semibold tracking-tight text-navy-foreground sm:text-3xl md:text-4xl"
+          className="mt-8 max-w-2xl font-heading text-2xl font-semibold tracking-tight text-foreground sm:text-3xl md:text-4xl"
           initial={reduce ? false : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
@@ -47,7 +46,7 @@ export function HeroSection() {
         </motion.h1>
 
         <motion.p
-          className="mt-4 max-w-xl text-base leading-relaxed text-navy-foreground/70 sm:text-lg"
+          className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg"
           initial={reduce ? false : { opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
@@ -71,7 +70,7 @@ export function HeroSection() {
             href="/contact"
             size="lg"
             variant="outline"
-            className="h-11 border-white/25 bg-transparent px-5 text-base text-navy-foreground hover:bg-white/10 hover:text-navy-foreground"
+            className="h-11 border-foreground/20 bg-transparent px-5 text-base text-foreground hover:bg-primary/5 hover:text-foreground"
           >
             Start a project
           </ButtonLink>

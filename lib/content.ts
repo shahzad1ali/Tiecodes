@@ -6,7 +6,7 @@ export const company = {
   description:
     "TieCodes is a software house creating custom web applications, mobile apps, GPS platforms, SaaS dashboards, and workflow systems for logistics, field operations, service marketplaces, and digital business growth.",
   location: "Lahore, Punjab, Pakistan",
-  email: "info@tiecodes.com",
+  email: "darabkhanse@gmail.com",
   phones: ["+92 308 612 2231", "+92 321 4086550"],
   linkedin: "https://www.linkedin.com/company/tiecodes-pvt-ltd",
   website: "https://tiecodes.com",

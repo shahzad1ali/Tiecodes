@@ -17,12 +17,12 @@ export function ProductsSection() {
   const [featured, ...rest] = solutions;
 
   return (
-    <section className="surface-slate relative overflow-hidden py-20 text-navy-foreground md:py-24">
+    <section className="surface-slate relative overflow-hidden py-20 text-foreground md:py-24">
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.07]"
         style={{
           backgroundImage:
-            "linear-gradient(to right, #3B82F6 1px, transparent 1px), linear-gradient(to bottom, #3B82F6 1px, transparent 1px)",
+            "linear-gradient(to right, #2563C7 1px, transparent 1px), linear-gradient(to bottom, #2563C7 1px, transparent 1px)",
           backgroundSize: "52px 52px",
           maskImage: "linear-gradient(to bottom, black, transparent 90%)",
         }}
@@ -31,10 +31,10 @@ export function ProductsSection() {
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         <Reveal>
           <SectionEyebrow>Product platforms</SectionEyebrow>
-          <SectionHeading className="text-navy-foreground">
+          <SectionHeading>
             Custom web, mobile, and workflow software we design and ship
           </SectionHeading>
-          <SectionLead className="text-navy-foreground/65">
+          <SectionLead>
             Purpose-built platforms for fleets, service businesses, booking flows,
             dashboards, and operational portals — owned by you, engineered by us.
           </SectionLead>
@@ -46,7 +46,7 @@ export function ProductsSection() {
               <HoverLift>
                 <Link
                   href={`/solutions/${featured.slug}`}
-                  className="group relative flex h-full min-h-[300px] flex-col justify-between overflow-hidden rounded-2xl border border-primary/25 bg-gradient-to-br from-[#1f3b6d] via-[#2c5aa5] to-[#1e293b] p-8 sm:p-10"
+                  className="group relative flex h-full min-h-[300px] flex-col justify-between overflow-hidden rounded-2xl border border-primary/25 bg-gradient-to-br from-white via-[#f7fbff] to-[#e8f2ff] p-8 shadow-[0_24px_60px_-38px_rgb(37_66_102_/_0.2)] sm:p-10"
                 >
                   <div className="pointer-events-none absolute -right-10 top-0 size-64 rounded-full bg-primary/25 blur-3xl transition-opacity group-hover:opacity-100" />
                   <div className="pointer-events-none absolute bottom-0 left-0 size-40 rounded-full bg-accent/15 blur-3xl" />
@@ -57,7 +57,7 @@ export function ProductsSection() {
                     <h3 className="mt-6 font-heading text-2xl font-semibold tracking-tight sm:text-3xl">
                       {featured.title}
                     </h3>
-                    <p className="mt-3 max-w-md text-navy-foreground/70">
+                    <p className="mt-3 max-w-md text-muted-foreground">
                       {featured.summary}
                     </p>
                   </div>
@@ -82,14 +82,14 @@ export function ProductsSection() {
                       <Icon name={solution.icon} className="size-4" />
                     </div>
                     <div className="min-w-0 flex-1">
-                      <h3 className="font-heading text-base font-semibold text-navy-foreground group-hover:text-primary">
+                      <h3 className="font-heading text-base font-semibold text-foreground group-hover:text-primary">
                         {solution.title}
                       </h3>
-                      <p className="mt-1 line-clamp-2 text-sm text-navy-foreground/60">
+                      <p className="mt-1 line-clamp-2 text-sm text-muted-foreground">
                         {solution.summary}
                       </p>
                     </div>
-                    <ArrowUpRight className="mt-1 size-4 shrink-0 text-navy-foreground/45 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-primary" />
+                    <ArrowUpRight className="mt-1 size-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-primary" />
                   </Link>
                 </HoverLift>
               </StaggerItem>

@@ -18,6 +18,7 @@ export function ContactForm() {
 
   async function onSubmit(e: FormEvent) {
     e.preventDefault();
+    const form = new FormData(e.currentTarget as HTMLFormElement);
     setError("");
     setSuccess(false);
 
@@ -35,7 +36,7 @@ export function ContactForm() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, phone, message }),
+        body: JSON.stringify({ name, email, phone, message, website: form.get("website") }),
       });
       const data = (await res.json()) as { error?: string; mailto?: boolean };
 
@@ -69,6 +70,7 @@ export function ContactForm() {
 
   return (
     <form onSubmit={onSubmit} className="space-y-5 rounded-2xl bg-transparent p-6 sm:p-8">
+      <input name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute -left-[9999px] h-px w-px opacity-0" />
       <div className="rounded-xl border border-primary/20 bg-primary/5 px-4 py-3 text-sm text-foreground">
         {company.responseTime} NDA available on request.
       </div>
@@ -80,6 +82,7 @@ export function ContactForm() {
           onChange={(e) => setName(e.target.value)}
           placeholder="Full name"
           autoComplete="name"
+          maxLength={120}
           disabled={pending}
         />
       </div>
@@ -92,6 +95,7 @@ export function ContactForm() {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="you@company.com"
           autoComplete="email"
+          maxLength={254}
           disabled={pending}
         />
       </div>
@@ -104,6 +108,7 @@ export function ContactForm() {
           onChange={(e) => setPhone(e.target.value)}
           placeholder="+92 …"
           autoComplete="tel"
+          maxLength={40}
           disabled={pending}
         />
       </div>
@@ -115,6 +120,7 @@ export function ContactForm() {
           onChange={(e) => setMessage(e.target.value)}
           placeholder="Tell us about your fleet, drivers, or logistics needs…"
           className="min-h-32"
+          maxLength={5000}
           disabled={pending}
         />
       </div>

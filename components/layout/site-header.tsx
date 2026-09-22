@@ -24,17 +24,8 @@ function isActive(pathname: string, href: string) {
 export function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const onDark = pathname === "/";
-
   return (
-    <header
-      className={cn(
-        "sticky top-0 z-50 border-b backdrop-blur-md",
-        onDark
-          ? "border-white/10 bg-navy/80 text-navy-foreground"
-          : "border-border/80 bg-background/90"
-      )}
-    >
+    <header className="sticky top-0 z-50 border-b border-border/80 bg-background/90 text-foreground backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         <Logo size="sm" showTagline={false} />
 
@@ -48,13 +39,7 @@ export function SiteHeader() {
                 aria-current={active ? "page" : undefined}
                 className={cn(
                   "relative rounded-md px-2.5 py-2 text-sm font-medium transition-colors xl:px-3",
-                  onDark
-                    ? active
-                      ? "text-primary"
-                      : "text-navy-foreground/75 hover:text-navy-foreground"
-                    : active
-                      ? "text-foreground"
-                      : "text-muted-foreground hover:text-foreground"
+                  active ? "text-primary" : "text-muted-foreground hover:text-foreground"
                 )}
               >
                 {link.label}
@@ -76,9 +61,7 @@ export function SiteHeader() {
           <SheetTrigger
             className={cn(
               "inline-flex size-8 items-center justify-center rounded-lg lg:hidden",
-              onDark
-                ? "text-navy-foreground hover:bg-white/10"
-                : "hover:bg-muted"
+              "text-foreground hover:bg-muted"
             )}
             aria-label="Open menu"
           >
