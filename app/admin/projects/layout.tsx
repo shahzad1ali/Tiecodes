@@ -7,8 +7,10 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-export default async function AdminProjectsLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default async function AdminProjectsLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   const admin = await getAdmin();
-  if (!admin) redirect("/admin");
+  if (!admin) redirect("/");
   return children;
 }
