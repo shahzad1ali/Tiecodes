@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
+import { ToastProvider } from "@/components/providers/toast-provider";
 import { company } from "@/lib/content";
 import "./globals.css";
 
@@ -45,9 +46,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       className="h-full antialiased"
     >
       <body className="flex min-h-full flex-col font-sans">
-        <SiteHeader />
-        <main className="flex-1">{children}</main>
-        <SiteFooter />
+        <ToastProvider>
+          <SiteHeader />
+          <main className="flex-1">{children}</main>
+          <SiteFooter />
+        </ToastProvider>
       </body>
     </html>
   );
