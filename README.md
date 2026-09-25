@@ -1,71 +1,95 @@
 # TieCodes Website
 
-Marketing site for **TieCodes** — fleet management, GPS tracking, driver apps, taxi dispatch, and custom load boards.
+Marketing site + portfolio admin for **TieCodes** (fleet, GPS, drivers, logistics).
 
 ## Stack
 
-- Next.js (App Router) + TypeScript
+- Next.js 16 (App Router) + TypeScript
+- Prisma + MySQL
 - Tailwind CSS + shadcn/ui
 - Framer Motion
-- Theme: *Tie Signal* (LinkedIn-aligned cyan `#2EB7E5` + navy `#0A1628`)
 
-## Develop
+## Local development
 
 ```bash
+cp .env.example .env
+# set ADMIN_EMAIL, ADMIN_PASSWORD, AUTH_SECRET
+
+docker compose up -d          # MySQL on 127.0.0.1:3307
 npm install
+npm run db:deploy             # migrate + seed admin
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+- Site: http://localhost:3000  
+- Admin: http://localhost:3000/admin/login  
+
+Or one-shot local DB setup: `npm run setup:admin` (requires Docker access).
+
+## Production (server)
+
+### Option A — Docker Compose (recommended on a VPS)
+
+1. Clone the repo on the server.
+2. `cp .env.example .env` and set real values:
+
+```env
+MYSQL_PASSWORD=strong-db-password
+MYSQL_ROOT_PASSWORD=strong-root-password
+AUTH_SECRET=at-least-32-random-characters-here
+ADMIN_EMAIL=you@company.com
+ADMIN_PASSWORD=strong-admin-password
+STORAGE_PROVIDER=local
+APP_PORT=3000
+```
+
+3. Start:
+
+```bash
+docker compose -f docker-compose.prod.yml up -d --build
+```
+
+On boot the container runs migrations, seeds the admin user, then starts the app.  
+Open `https://your-domain/admin/login`.
+
+### Option B — Node on the server (managed MySQL)
+
+```bash
+cp .env.example .env   # set DATABASE_URL, AUTH_SECRET, ADMIN_*
+npm ci
+npm run build
+npm run db:deploy
+npm start
+```
+
+Use a process manager (systemd / PM2) and put Nginx/Caddy in front for HTTPS.
+
+### Required production env
+
+| Variable | Purpose |
+|----------|---------|
+| `DATABASE_URL` | MySQL connection string |
+| `AUTH_SECRET` | 32+ char secret for admin cookies |
+| `ADMIN_EMAIL` / `ADMIN_PASSWORD` | Seeded admin login |
+| `STORAGE_PROVIDER` | `local` (single VPS + volume) or `azure` |
+
+Never commit `.env`. Only `.env.example` is in git.
 
 ## Scripts
 
-- `npm run dev` — local development
-- `npm run build` — production build
-- `npm run start` — serve production build
+| Script | Use |
+|--------|-----|
+| `npm run dev` | Local Next.js |
+| `npm run build` | Production build |
+| `npm start` | Serve build |
+| `npm run db:deploy` | `prisma migrate deploy` + seed admin |
+| `npm run setup:admin` | Local Docker MySQL + migrate + seed |
 
-## Pages
+## Admin & API
 
-- `/` — Home
-- `/solutions` — Product lines
-- `/solutions/[slug]` — Fleet, GPS, Drivers, Taxi, Load Board
-- `/services` — Services
-- `/about` — Company
-- `/contact` — Contact form (mailto)
+- Login UI: `/admin` or `/admin/login`
+- Manage projects: `/admin/projects` (auth cookie required)
+- Health: `GET /api/v1/health`
+- Public projects: `GET /api/v1/projects`
 
-Content lives in `lib/content.ts`.
-
-## Portfolio API
-
-The editable portfolio backend runs inside the Next.js application. It uses
-Prisma with MySQL, protects admin mutations with an HTTP-only cookie, and
-supports local uploads or Azure Blob Storage.
-
-### Local setup
-
-```bash
-docker compose up -d
-npm install
-npm run prisma:generate
-npm run prisma:migrate -- --name init
-npm run prisma:seed
-npm run dev
-```
-
-The public site and API are served by one Next.js process at
-`http://localhost:3000`.
-
-The local MySQL port is `3307` and is bound to `127.0.0.1`, so it is not
-reachable from the network. The seeded development admin values come from the
-root `.env`.
-
-Public API routes are `GET /api/v1/projects` and
-`GET /api/v1/projects/:slug`. Admin login is `POST /api/v1/auth/login`; project
-creation, editing, deletion, and image upload require the admin cookie.
-
-### Production configuration
-
-Change environment variables only when deploying: use a managed MySQL
-connection string, a long random `AUTH_SECRET`, and
-`STORAGE_PROVIDER=azure` with Azure Blob credentials. Local disk
-uploads are for development only and are not durable across server instances.
+`/admin` is disallowed in `robots.txt`.

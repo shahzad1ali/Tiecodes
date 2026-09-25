@@ -1,3 +1,6 @@
+# Local development MySQL only (not for production).
+# Production: use docker-compose.prod.yml or a managed MySQL + the Dockerfile.
+
 services:
   mysql:
     image: mysql:8.4
