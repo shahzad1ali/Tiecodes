@@ -15,13 +15,13 @@ import { aiCapabilities } from "@/lib/content";
 
 export function AiIntelligenceSection() {
   return (
-    <section className="surface-ink relative overflow-hidden py-20 text-foreground md:py-24">
+    <section data-section="services" className="relative overflow-hidden py-20 md:py-24">
       <div
-        className="pointer-events-none absolute -left-24 top-10 size-72 rounded-full bg-primary/20 blur-3xl"
+        className="pointer-events-none absolute -left-24 top-10 size-72 rounded-full bg-[color:var(--c-cyan)]/20 blur-3xl"
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute -right-16 bottom-0 size-64 rounded-full bg-accent/15 blur-3xl"
+        className="pointer-events-none absolute -right-16 bottom-0 size-64 rounded-full bg-[color:var(--c-blue)]/15 blur-3xl"
         aria-hidden
       />
 
@@ -29,10 +29,10 @@ export function AiIntelligenceSection() {
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <Reveal>
             <SectionEyebrow>AI intelligence</SectionEyebrow>
-            <SectionHeading className="text-foreground">
+            <SectionHeading>
               Workflow intelligence for service teams, fleets, and platform ops
             </SectionHeading>
-            <SectionLead className="text-muted-foreground">
+            <SectionLead>
               TieCodes layers practical AI into operational products: smarter
               assignment recommendations, agreement checks, completion tracking,
               and business signals that turn workflows into clear decisions.
@@ -42,14 +42,14 @@ export function AiIntelligenceSection() {
               {aiCapabilities.map((item) => (
                 <StaggerItem key={item.title}>
                   <HoverLift>
-                    <div className="panel-glass-dark h-full rounded-2xl p-4">
-                      <div className="flex size-9 items-center justify-center rounded-lg bg-primary/15 text-primary">
+                    <div className="card h-full p-4">
+                      <div className="flex size-9 items-center justify-center rounded-lg bg-[color:var(--accent)]/15 text-[color:var(--accent)]">
                         <Icon name={item.icon} className="size-4" />
                       </div>
-                      <h3 className="mt-3 font-heading text-sm font-semibold text-foreground">
+                      <h3 className="mt-3 font-heading text-sm font-semibold">
                         {item.title}
                       </h3>
-                      <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
+                      <p className="text-muted mt-1.5 text-xs leading-relaxed">
                         {item.description}
                       </p>
                     </div>
@@ -59,14 +59,14 @@ export function AiIntelligenceSection() {
             </Stagger>
 
             <div className="mt-8">
-              <ButtonLink href="/contact" size="lg" className="h-11 px-5">
+              <ButtonLink href="/contact" size="lg" className="btn h-11 border-0 px-5">
                 Talk AI with TieCodes
               </ButtonLink>
             </div>
           </Reveal>
 
           <Reveal delay={0.1} className="space-y-5">
-            <div className="overflow-hidden rounded-2xl border border-primary/20 bg-[#eaf4ff] p-1 shadow-[0_28px_60px_-36px_rgb(37_66_102_/_0.2)]">
+            <div className="soft-card overflow-hidden rounded-2xl p-1">
               <Image
                 src="/brand/ai-fleet-intelligence.png"
                 alt="Abstract AI fleet intelligence network artwork"
@@ -77,7 +77,7 @@ export function AiIntelligenceSection() {
               />
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
-              <div className="overflow-hidden rounded-2xl border border-primary/20 bg-[#0d2138] p-1">
+              <div className="overflow-hidden rounded-2xl border border-[color:var(--card-border)] bg-[color:var(--c-ink)] p-1">
                 <Image
                   src="/brand/ai-ops-dashboard.png"
                   alt="Abstract AI operations dashboard artwork"
@@ -86,7 +86,7 @@ export function AiIntelligenceSection() {
                   className="h-full w-full object-cover brightness-110 saturate-75"
                 />
               </div>
-              <div className="overflow-hidden rounded-2xl border border-primary/20">
+              <div className="overflow-hidden rounded-2xl border border-[color:var(--card-border)]">
                 <AiCoreArt className="h-full w-full" />
               </div>
             </div>

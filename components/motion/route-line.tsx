@@ -27,15 +27,15 @@ export function RouteLine({ className }: { className?: string }) {
       {!reduce && (
         <motion.circle
           r="7"
-          fill="#2EB7E5"
+          fill="var(--c-cyan)"
           initial={{ offsetDistance: "0%" }}
           animate={{ offsetDistance: "100%" }}
           style={{ offsetPath: "path('M20 180 C120 40, 220 200, 320 90 S520 40, 620 120 S740 60, 780 40')" }}
           transition={{ duration: 3.2, repeat: Infinity, ease: "linear" }}
         />
       )}
-      <circle cx="20" cy="180" r="5" fill="#F5A524" />
-      <circle cx="780" cy="40" r="5" fill="#2EB7E5" />
+      <circle cx="20" cy="180" r="5" fill="var(--c-amber)" />
+      <circle cx="780" cy="40" r="5" fill="var(--c-cyan)" />
     </svg>
   );
 }

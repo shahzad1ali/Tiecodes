@@ -25,10 +25,14 @@ function isActive(pathname: string, href: string) {
 export function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const isAdminProjects = pathname.startsWith("/admin/projects");
+  const isAdminArea =
+    pathname.startsWith("/admin/projects") || pathname.startsWith("/admin/profile");
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/80 bg-background/90 text-foreground backdrop-blur-md">
+    <header
+      data-section="navbar"
+      className="sticky top-0 z-50 border-b border-[color:var(--card-border)] text-[color:var(--text)] backdrop-blur-md"
+    >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         <Logo size="sm" showTagline={false} />
 
@@ -57,12 +61,12 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          {isAdminProjects ? (
+          {isAdminArea ? (
             <AdminProfileMenu />
           ) : (
             <ButtonLink
               href="/contact"
-              className="bg-primary text-primary-foreground hover:bg-primary/90"
+              className="bg-[color:var(--c-navy)] text-[color:var(--c-white)] hover:bg-[color:var(--c-blue)] hover:text-[color:var(--c-white)]"
             >
               Talk to us
             </ButtonLink>
@@ -70,7 +74,7 @@ export function SiteHeader() {
         </div>
 
         <div className="flex items-center gap-2 lg:hidden">
-          {isAdminProjects ? <AdminProfileMenu /> : null}
+          {isAdminArea ? <AdminProfileMenu /> : null}
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger
               className={cn(
@@ -105,7 +109,7 @@ export function SiteHeader() {
                     </Link>
                   );
                 })}
-                {!isAdminProjects ? (
+                {!isAdminArea ? (
                   <ButtonLink
                     href="/contact"
                     className="mt-4"

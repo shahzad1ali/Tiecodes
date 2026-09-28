@@ -12,10 +12,13 @@ export function HeroSection() {
   const reduce = useReducedMotion();
 
   return (
-    <section className="relative isolate min-h-[calc(100svh-4rem)] overflow-hidden bg-background text-foreground">
+    <section
+      data-section="hero"
+      className="relative isolate min-h-[calc(100svh-4rem)] overflow-hidden"
+    >
       <div className="hero-glow absolute inset-0" />
       <div className="hero-grid absolute inset-0 opacity-60" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[color:var(--c-white)] to-transparent" />
 
       {/* Unique geometric network art — no stock / LinkedIn photos */}
       <FleetNetworkArt className="pointer-events-none absolute inset-y-0 right-[-4%] hidden w-[52%] max-w-none opacity-70 md:block" />
@@ -62,7 +65,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55, delay: 0.32, ease: [0.22, 1, 0.36, 1] }}
         >
-          <ButtonLink href="/solutions" size="lg" className="h-11 px-5 text-base">
+          <ButtonLink href="/solutions" size="lg" className="h-11 border-foreground/20 bg-transparent px-5 text-base text-white bg-blue-500 hover:bg-blue-600 hover:text-white">
             Explore solutions
             <ArrowRight data-icon="inline-end" />
           </ButtonLink>

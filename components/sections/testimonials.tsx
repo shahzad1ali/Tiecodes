@@ -12,7 +12,7 @@ import { testimonials } from "@/lib/content";
 
 export function TestimonialsSection() {
   return (
-    <section className="surface-dawn border-y border-primary/10 py-20 md:py-24">
+    <section data-section="testimonials" className="border-y border-[color:var(--card-border)] py-20 md:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <Reveal>
           <SectionEyebrow>Trust</SectionEyebrow>
@@ -27,14 +27,14 @@ export function TestimonialsSection() {
           {testimonials.map((item) => (
             <StaggerItem key={item.role + item.region}>
               <HoverLift>
-                <figure className="panel-glass flex h-full flex-col rounded-2xl p-6">
-                  <Quote className="size-6 text-primary" aria-hidden />
-                  <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-foreground/90">
+                <figure className="card flex h-full flex-col p-6">
+                  <Quote className="size-6 text-[color:var(--accent)]" aria-hidden />
+                  <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-[color:var(--text)]">
                     “{item.quote}”
                   </blockquote>
-                  <figcaption className="mt-6 border-t border-border/80 pt-4">
+                  <figcaption className="mt-6 border-t border-[color:var(--card-border)] pt-4">
                     <p className="font-heading text-sm font-semibold">{item.role}</p>
-                    <p className="text-xs text-muted-foreground">{item.region}</p>
+                    <p className="text-muted text-xs">{item.region}</p>
                   </figcaption>
                 </figure>
               </HoverLift>

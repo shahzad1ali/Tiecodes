@@ -10,12 +10,12 @@ import { techStack } from "@/lib/content";
 
 export function TechStackSection() {
   return (
-    <section className="surface-ink relative overflow-hidden py-20 text-foreground md:py-24">
+    <section data-section="stats" className="relative overflow-hidden py-20 md:py-24">
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.08]"
         style={{
           backgroundImage:
-            "radial-gradient(circle at 1px 1px, #2563C7 1px, transparent 0)",
+            "radial-gradient(circle at 1px 1px, var(--c-blue) 1px, transparent 0)",
           backgroundSize: "28px 28px",
         }}
         aria-hidden
@@ -35,7 +35,7 @@ export function TechStackSection() {
         <Stagger className="mt-12 flex flex-wrap gap-3">
           {techStack.map((tech) => (
             <StaggerItem key={tech}>
-              <span className="chip-glow inline-flex rounded-full px-4 py-2.5 text-sm font-medium text-foreground transition-all hover:border-primary/60 hover:bg-primary/20 hover:text-primary">
+              <span className="chip-glow inline-flex rounded-full px-4 py-2.5 text-sm font-medium transition-all hover:border-[color:var(--btn-hover)]/60 hover:bg-[color:var(--c-cyan)]/15 hover:text-[color:var(--btn-hover)]">
                 {tech}
               </span>
             </StaggerItem>

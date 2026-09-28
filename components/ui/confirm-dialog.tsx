@@ -90,7 +90,7 @@ export function ConfirmDialog({
             type="button"
             disabled={busy}
             onClick={onConfirm}
-            className="cursor-pointer rounded-xl bg-destructive px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-destructive/90 disabled:cursor-not-allowed disabled:opacity-60"
+            className="cursor-pointer rounded-xl bg-destructive px-4 py-2.5 text-sm font-medium text-[color:var(--c-white)] transition-colors hover:bg-destructive/90 disabled:cursor-not-allowed disabled:opacity-60"
           >
             {busy ? "Deleting…" : confirmLabel}
           </button>

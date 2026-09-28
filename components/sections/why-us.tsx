@@ -11,11 +11,11 @@ import { company, whyUs } from "@/lib/content";
 
 export function WhyUsSection() {
   return (
-    <section className="surface-ice relative overflow-hidden py-20 md:py-24">
+    <section data-section="engagement" className="relative overflow-hidden py-20 md:py-24">
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.15fr] lg:items-start">
           <Reveal>
-            <div className="rounded-3xl border border-primary/20 bg-gradient-to-br from-white via-[#f7fbff] to-[#e8f2ff] p-8 shadow-[0_24px_60px_-36px_rgb(37_66_102_/_0.2)] sm:p-10">
+            <div className="soft-card rounded-3xl p-8 sm:p-10">
               <SectionEyebrow>Why {company.name}</SectionEyebrow>
               <SectionHeading>
                 A partner that builds software you can grow on
@@ -27,24 +27,24 @@ export function WhyUsSection() {
               </SectionLead>
 
               <dl className="mt-10 grid grid-cols-2 gap-6">
-                <div className="rounded-xl border border-primary/15 bg-white/70 p-4">
-                  <dt className="text-xs font-semibold tracking-wide text-primary uppercase">
+                <div className="card rounded-xl p-4">
+                  <dt className="accent text-xs font-semibold tracking-wide uppercase">
                     Repeat clients
                   </dt>
-                  <dd className="mt-1 font-heading text-3xl font-semibold tracking-tight text-primary">
+                  <dd className="accent mt-1 font-heading text-3xl font-semibold tracking-tight">
                     {company.repeatClients}
                   </dd>
                 </div>
-                <div className="rounded-xl border border-primary/15 bg-white/70 p-4">
-                  <dt className="text-xs font-semibold tracking-wide text-accent uppercase">
+                <div className="card rounded-xl p-4">
+                  <dt className="text-xs font-semibold tracking-wide text-[color:var(--heading)] uppercase">
                     Team
                   </dt>
                   <dd className="mt-1 font-heading text-3xl font-semibold tracking-tight">
                     {company.employees}
                   </dd>
                 </div>
-                <div className="col-span-2 rounded-xl border border-primary/15 bg-white/70 p-4">
-                  <dt className="text-xs font-semibold tracking-wide text-primary uppercase">
+                <div className="card col-span-2 rounded-xl p-4">
+                  <dt className="accent text-xs font-semibold tracking-wide uppercase">
                     Headquarters
                   </dt>
                   <dd className="mt-1 font-heading text-xl font-semibold tracking-tight">
@@ -59,22 +59,18 @@ export function WhyUsSection() {
             {whyUs.map((item, i) => (
               <StaggerItem key={item.title}>
                 <HoverLift>
-                  <div
-                    className={`h-full rounded-2xl p-6 ${
-                      i % 2 === 0
-                        ? "panel-glass"
-                        : "border border-primary/20 bg-gradient-to-br from-white to-[#e8f2ff]"
-                    }`}
-                  >
+                  <div className="card h-full p-6">
                     <div
                       className={`mb-4 h-1 w-10 rounded-full ${
-                        i % 2 === 0 ? "bg-primary" : "bg-accent"
+                        i % 2 === 0
+                          ? "bg-[color:var(--accent)]"
+                          : "bg-[color:var(--btn-hover)]"
                       }`}
                     />
                     <h3 className="font-heading text-base font-semibold tracking-tight">
                       {item.title}
                     </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    <p className="text-muted mt-2 text-sm leading-relaxed">
                       {item.description}
                     </p>
                   </div>

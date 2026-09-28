@@ -15,7 +15,7 @@ export default function PrivacyPage() {
         title="Privacy Policy"
         description={`How ${company.name} handles information you share through this website.`}
       />
-      <section className="surface-mist py-16 md:py-20">
+      <section data-section="solutions" className="py-16 md:py-20">
         <div className="prose prose-neutral mx-auto max-w-3xl px-4 text-sm leading-relaxed text-muted-foreground sm:px-6">
           <p className="text-foreground">Last updated: September 2026</p>
           <h2 className="mt-8 font-heading text-xl font-semibold text-foreground">Overview</h2>

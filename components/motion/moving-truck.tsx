@@ -71,14 +71,14 @@ export function MovingTruck({ className }: { className?: string }) {
 
         <path
           d={ROUTE}
-          stroke="rgba(46,183,229,0.18)"
+          stroke="color-mix(in srgb, var(--c-cyan) 18%, transparent)"
           strokeWidth="10"
           strokeLinecap="round"
         />
         <motion.path
           ref={pathRef}
           d={ROUTE}
-          stroke="#2EB7E5"
+          stroke="var(--c-cyan)"
           strokeWidth="2.5"
           strokeLinecap="round"
           strokeDasharray="10 12"
@@ -91,16 +91,16 @@ export function MovingTruck({ className }: { className?: string }) {
           cx="40"
           cy="170"
           r="6"
-          fill="#F5A524"
+          fill="var(--c-amber)"
           filter={`url(#${pathId}-glow)`}
         />
-        <circle cx="290" cy="85" r="4" fill="#2EB7E5" opacity="0.7" />
-        <circle cx="560" cy="125" r="4" fill="#2EB7E5" opacity="0.7" />
+        <circle cx="290" cy="85" r="4" fill="var(--c-cyan)" opacity="0.7" />
+        <circle cx="560" cy="125" r="4" fill="var(--c-cyan)" opacity="0.7" />
         <circle
           cx="760"
           cy="70"
           r="6"
-          fill="#2EB7E5"
+          fill="var(--c-cyan)"
           filter={`url(#${pathId}-glow)`}
         />
 
@@ -109,7 +109,7 @@ export function MovingTruck({ className }: { className?: string }) {
             cx="760"
             cy="70"
             r="10"
-            stroke="#2EB7E5"
+            stroke="var(--c-cyan)"
             strokeWidth="2"
             fill="none"
             initial={{ scale: 0.6, opacity: 0.8 }}
@@ -120,24 +120,24 @@ export function MovingTruck({ className }: { className?: string }) {
 
         <motion.g style={{ x, y, rotate }}>
           <g transform="translate(-22, -12)">
-            <rect x="0" y="4" width="16" height="14" rx="2" fill="#2EB7E5" />
+            <rect x="0" y="4" width="16" height="14" rx="2" fill="var(--c-cyan)" />
             <rect
               x="3"
               y="6"
               width="7"
               height="6"
               rx="1"
-              fill="#0A1628"
+              fill="var(--c-ink)"
               opacity="0.55"
             />
-            <rect x="16" y="2" width="26" height="16" rx="2" fill="#E8EEF7" />
+            <rect x="16" y="2" width="26" height="16" rx="2" fill="var(--c-ice)" />
             <rect
               x="20"
               y="5"
               width="6"
               height="10"
               rx="1"
-              fill="#0A1628"
+              fill="var(--c-ink)"
               opacity="0.15"
             />
             <rect
@@ -146,7 +146,7 @@ export function MovingTruck({ className }: { className?: string }) {
               width="6"
               height="10"
               rx="1"
-              fill="#0A1628"
+              fill="var(--c-ink)"
               opacity="0.15"
             />
             <rect
@@ -155,31 +155,31 @@ export function MovingTruck({ className }: { className?: string }) {
               width="4"
               height="10"
               rx="1"
-              fill="#F5A524"
+              fill="var(--c-amber)"
               opacity="0.85"
             />
             <circle
               cx="8"
               cy="20"
               r="3.2"
-              fill="#0A1628"
-              stroke="#2EB7E5"
+              fill="var(--c-ink)"
+              stroke="var(--c-cyan)"
               strokeWidth="1"
             />
             <circle
               cx="24"
               cy="20"
               r="3.2"
-              fill="#0A1628"
-              stroke="#2EB7E5"
+              fill="var(--c-ink)"
+              stroke="var(--c-cyan)"
               strokeWidth="1"
             />
             <circle
               cx="36"
               cy="20"
               r="3.2"
-              fill="#0A1628"
-              stroke="#2EB7E5"
+              fill="var(--c-ink)"
+              stroke="var(--c-cyan)"
               strokeWidth="1"
             />
           </g>

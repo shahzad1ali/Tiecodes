@@ -27,7 +27,7 @@ export default async function InsightArticlePage({ params }: Props) {
   return (
     <>
       <PageHero eyebrow="Insights" title={post.title} description={post.excerpt} />
-      <article className="surface-mist py-16 md:py-20">
+      <article data-section="solutions" className="py-16 md:py-20">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <Reveal>
             <p className="text-sm text-muted-foreground">

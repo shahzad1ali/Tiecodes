@@ -19,12 +19,13 @@ export default function SolutionsPage() {
   return (
     <>
       <PageHero
+        section="solutions"
         eyebrow="Solutions"
         title="Platforms for fleets, drivers, and brokers"
         description="Custom software for the logistics world — tracking, dispatch, registration, and white-label load boards you own."
       />
 
-      <section className="surface-mist py-16 md:py-20">
+      <section data-section="solutions" className="py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <Stagger className="grid gap-5 md:grid-cols-2">
             {solutions.map((solution, i) => (
@@ -34,7 +35,7 @@ export default function SolutionsPage() {
                     href={`/solutions/${solution.slug}`}
                     className={`group flex h-full flex-col rounded-2xl p-7 transition-[border-color,box-shadow] hover:border-primary/45 ${
                       i === 0
-                        ? "border border-primary/25 bg-gradient-to-br from-white via-[#f7fbff] to-[#e8f2ff] text-foreground shadow-[0_24px_50px_-34px_rgb(37_66_102_/_0.2)]"
+                        ? "soft-card"
                         : "panel-glass"
                     }`}
                   >

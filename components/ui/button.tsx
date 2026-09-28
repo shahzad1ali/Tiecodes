@@ -7,16 +7,16 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/80",
+        default: "bg-[color:var(--c-navy)] text-[color:var(--c-white)] hover:bg-[color:var(--c-blue)]",
         outline:
-          "border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50",
+          "border-[color:var(--c-border)] bg-[color:var(--c-white)] text-[color:var(--c-navy)] hover:bg-[color:var(--c-sky)] hover:text-[color:var(--c-navy)] aria-expanded:bg-[color:var(--c-sky)] aria-expanded:text-[color:var(--c-navy)]",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-[color-mix(in_oklch,var(--secondary),var(--foreground)_5%)] aria-expanded:bg-secondary aria-expanded:text-secondary-foreground",
+          "bg-[color:var(--c-sky)] text-[color:var(--c-navy)] hover:bg-[color:var(--c-ice)] aria-expanded:bg-[color:var(--c-sky)] aria-expanded:text-[color:var(--c-navy)]",
         ghost:
-          "hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50",
+          "hover:bg-[color:var(--c-ice)] hover:text-[color:var(--c-navy)] aria-expanded:bg-[color:var(--c-ice)] aria-expanded:text-[color:var(--c-navy)]",
         destructive:
-          "bg-destructive/10 text-destructive hover:bg-destructive/20 focus-visible:border-destructive/40 focus-visible:ring-destructive/20 dark:bg-destructive/20 dark:hover:bg-destructive/30 dark:focus-visible:ring-destructive/40",
-        link: "text-primary underline-offset-4 hover:underline",
+          "bg-[color:var(--c-danger)]/10 text-[color:var(--c-danger)] hover:bg-[color:var(--c-danger)]/20 focus-visible:border-[color:var(--c-danger)]/40 focus-visible:ring-[color:var(--c-danger)]/20",
+        link: "text-[color:var(--c-navy)] underline-offset-4 hover:underline",
       },
       size: {
         default:

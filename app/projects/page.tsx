@@ -14,8 +14,8 @@ export default async function ProjectsPage() {
     projects = [];
   }
   return <>
-    <PageHero eyebrow="Portfolio" title="Software that moves operations forward" description="Selected platforms, dashboards, and mobile products built by TieCodes." />
-    <section className="surface-mist py-16 md:py-20"><div className="mx-auto grid max-w-6xl gap-5 px-4 sm:px-6 md:grid-cols-2">
+    <PageHero section="projects" eyebrow="Portfolio" title="Software that moves operations forward" description="Selected platforms, dashboards, and mobile products built by TieCodes." />
+    <section data-section="projects" className="py-16 md:py-20"><div className="mx-auto grid max-w-6xl gap-5 px-4 sm:px-6 md:grid-cols-2">
       {projects.map((project) => <Link key={project.id} href={`/projects/${project.slug}`} className="panel-glass group rounded-2xl p-6">
         <p className="text-xs uppercase tracking-[0.18em] text-primary">{project.industry ?? "Product engineering"}</p>
         <h2 className="mt-3 font-heading text-2xl font-semibold group-hover:text-primary">{project.title}</h2>

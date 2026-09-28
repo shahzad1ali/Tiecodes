@@ -1,0 +1,525 @@
+/* =========================================================
+   TIECODES THEME: the ONLY file you edit to change colors.
+   Level 1: palette (raw colors)
+   Level 2: per-section themes (which colors each section uses)
+
+   Color direction (inspired by ColorSpace blue→teal→white energy):
+   blue + white + cyan/teal related accents. No purple. No cream/terracotta.
+   Amber only for CTAs on dark sections and small highlights.
+   ========================================================= */
+
+:root {
+  /* ---------- LEVEL 1: PALETTE ---------- */
+  --c-blue: #2563c7;
+  --c-blue-dark: #1b4a99;
+  --c-blue-bright: #3b7be0;
+  --c-cyan: #2eb7e5;
+  --c-navy: #19324d;
+  --c-ink: #0f2236;
+  --c-amber: #f5a524;
+  --c-amber-hover: #ffb93d;
+  --c-teal: #12a594;
+  --c-teal-hover: #0e8b7c;
+  --c-white: #ffffff;
+  --c-ice: #f3f7fc;
+  --c-sky: #e6effb;
+  --c-mint: #e8f7f4;
+  --c-border: #dce6f2;
+  --c-slate: #5b6b7f;
+  --c-slate-light: #a9b8cb;
+  --c-danger: #dc2626;
+  --c-danger-fg: #ffffff;
+  --c-success: #059669;
+  --c-success-soft: #ecfdf5;
+
+  /* Bridge → app / Tailwind / shadcn tokens (all from Level 1) */
+  --background: var(--c-white);
+  --foreground: var(--c-ink);
+  --card: var(--c-white);
+  --card-foreground: var(--c-ink);
+  --popover: var(--c-white);
+  --popover-foreground: var(--c-ink);
+  --primary: var(--c-navy);
+  --primary-foreground: var(--c-white);
+  --secondary: var(--c-sky);
+  --secondary-foreground: var(--c-navy);
+  --muted: var(--c-ice);
+  --muted-foreground: var(--c-slate);
+  --accent: var(--c-amber);
+  --accent-foreground: var(--c-ink);
+  --destructive: var(--c-danger);
+  --border: var(--c-border);
+  --input: color-mix(in srgb, var(--c-border) 70%, var(--c-slate-light));
+  --ring: var(--c-blue);
+  --navy: var(--c-navy);
+  --navy-foreground: var(--c-white);
+  --route: var(--c-cyan);
+  --chart-1: var(--c-blue);
+  --chart-2: var(--c-navy);
+  --chart-3: var(--c-cyan);
+  --chart-4: var(--c-slate-light);
+  --chart-5: var(--c-ink);
+  --radius: 0.625rem;
+  --sidebar: var(--c-white);
+  --sidebar-foreground: var(--c-ink);
+  --sidebar-primary: var(--c-navy);
+  --sidebar-primary-foreground: var(--c-white);
+  --sidebar-accent: var(--c-ice);
+  --sidebar-accent-foreground: var(--c-ink);
+  --sidebar-border: var(--c-border);
+  --sidebar-ring: var(--c-blue);
+
+  /* Default section tokens (light pages) */
+  --bg: var(--c-white);
+  --heading: var(--c-navy);
+  --text: var(--c-ink);
+  --muted-local: var(--c-slate);
+  --card-bg: var(--c-white);
+  --card-border: var(--c-border);
+  --btn-bg: var(--c-navy);
+  --btn-fg: var(--c-white);
+  --btn-hover: var(--c-blue);
+  --accent-local: var(--c-blue);
+  --link: var(--c-blue);
+}
+
+/* ---------- LEVEL 2: SECTION THEMES ----------
+   Variables each section defines:
+   --bg, --heading, --text, --muted, --card-bg, --card-border,
+   --btn-bg, --btn-fg, --btn-hover, --accent, --link
+   Hover accents lean cyan/teal (ColorSpace-related), not purple.
+--------------------------------------------------- */
+
+[data-section="navbar"] {
+  --bg: color-mix(in srgb, var(--c-white) 90%, transparent);
+  --heading: var(--c-navy);
+  --text: var(--c-ink);
+  --muted: var(--c-slate);
+  --card-bg: var(--c-white);
+  --card-border: var(--c-border);
+  --btn-bg: var(--c-navy);
+  --btn-fg: var(--c-white);
+  --btn-hover: var(--c-blue);
+  --accent: var(--c-blue);
+  --link: var(--c-navy);
+  --primary: var(--c-navy);
+  --primary-foreground: var(--c-white);
+}
+
+[data-section="hero"] {
+  --bg: linear-gradient(
+    135deg,
+    var(--c-white) 0%,
+    var(--c-ice) 48%,
+    var(--c-sky) 100%
+  );
+  --heading: var(--c-ink);
+  --text: var(--c-ink);
+  --muted: var(--c-slate);
+  --card-bg: color-mix(in srgb, var(--c-white) 80%, transparent);
+  --card-border: color-mix(in srgb, var(--c-blue) 16%, transparent);
+  --btn-bg: var(--c-navy);
+  --btn-fg: var(--c-white);
+  --btn-hover: var(--c-blue);
+  --accent: var(--c-blue);
+  --link: var(--c-blue);
+  --background: transparent;
+  --foreground: var(--c-ink);
+  --muted-foreground: var(--c-slate);
+  --primary: var(--c-navy);
+  --primary-foreground: var(--c-white);
+  --border: var(--c-border);
+}
+
+[data-section="stats"] {
+  --bg: var(--c-ice);
+  --heading: var(--c-navy);
+  --text: var(--c-ink);
+  --muted: var(--c-slate);
+  --card-bg: var(--c-white);
+  --card-border: color-mix(in srgb, var(--c-blue) 20%, var(--c-border));
+  --btn-bg: var(--c-navy);
+  --btn-fg: var(--c-white);
+  --btn-hover: var(--c-blue);
+  --accent: var(--c-blue);
+  --link: var(--c-blue);
+  --background: var(--c-ice);
+  --foreground: var(--c-ink);
+  --muted-foreground: var(--c-slate);
+  --primary: var(--c-navy);
+  --primary-foreground: var(--c-white);
+  --border: color-mix(in srgb, var(--c-blue) 20%, var(--c-border));
+  --card: var(--c-white);
+}
+
+[data-section="solutions"] {
+  --bg: var(--c-sky);
+  --heading: var(--c-navy);
+  --text: var(--c-ink);
+  --muted: var(--c-slate);
+  --card-bg: var(--c-white);
+  --card-border: color-mix(in srgb, var(--c-blue) 22%, var(--c-border));
+  --btn-bg: var(--c-navy);
+  --btn-fg: var(--c-white);
+  --btn-hover: var(--c-blue);
+  --accent: var(--c-blue);
+  --link: var(--c-blue);
+  --background: var(--c-sky);
+  --foreground: var(--c-ink);
+  --muted-foreground: var(--c-slate);
+  --primary: var(--c-navy);
+  --primary-foreground: var(--c-white);
+  --border: color-mix(in srgb, var(--c-blue) 22%, var(--c-border));
+  --card: var(--c-white);
+}
+
+[data-section="services"] {
+  --bg: var(--c-sky);
+  --heading: var(--c-navy);
+  --text: var(--c-ink);
+  --muted: var(--c-slate);
+  --card-bg: var(--c-white);
+  --card-border: color-mix(in srgb, var(--c-blue) 22%, var(--c-border));
+  --btn-bg: var(--c-navy);
+  --btn-fg: var(--c-white);
+  --btn-hover: var(--c-blue);
+  --accent: var(--c-blue-dark);
+  --link: var(--c-blue-dark);
+  --background: var(--c-sky);
+  --foreground: var(--c-ink);
+  --muted-foreground: var(--c-slate);
+  --primary: var(--c-navy);
+  --primary-foreground: var(--c-white);
+  --border: color-mix(in srgb, var(--c-blue) 22%, var(--c-border));
+  --card: var(--c-white);
+  --navy: var(--c-navy);
+}
+
+[data-section="process"] {
+  --bg: var(--c-navy);
+  --heading: var(--c-white);
+  --text: #dbe7fa;
+  --muted: #a9c3ec;
+  --card-bg: color-mix(in srgb, var(--c-white) 12%, transparent);
+  --card-border: color-mix(in srgb, var(--c-white) 22%, transparent);
+  --btn-bg: var(--c-amber);
+  --btn-fg: var(--c-ink);
+  --btn-hover: var(--c-amber-hover);
+  --accent: var(--c-amber);
+  --link: var(--c-white);
+  --background: var(--c-navy);
+  --foreground: var(--c-white);
+  --muted-foreground: #a9c3ec;
+  --primary: var(--c-cyan);
+  --accent-foreground: var(--c-ink);
+  --border: color-mix(in srgb, var(--c-white) 22%, transparent);
+  --card: color-mix(in srgb, var(--c-white) 12%, transparent);
+  --navy: var(--c-navy);
+  --navy-foreground: var(--c-white);
+}
+
+[data-section="engagement"] {
+  --bg: var(--c-sky);
+  --heading: var(--c-navy);
+  --text: var(--c-ink);
+  --muted: var(--c-slate);
+  --card-bg: var(--c-white);
+  --card-border: color-mix(in srgb, var(--c-blue) 22%, var(--c-border));
+  --btn-bg: var(--c-navy);
+  --btn-fg: var(--c-white);
+  --btn-hover: var(--c-blue);
+  --accent: var(--c-blue);
+  --link: var(--c-blue);
+  --background: var(--c-sky);
+  --foreground: var(--c-ink);
+  --muted-foreground: var(--c-slate);
+  --primary: var(--c-navy);
+  --primary-foreground: var(--c-white);
+  --border: color-mix(in srgb, var(--c-blue) 22%, var(--c-border));
+  --card: var(--c-white);
+}
+
+[data-section="projects"] {
+  --bg: var(--c-ice);
+  --heading: var(--c-navy);
+  --text: var(--c-ink);
+  --muted: var(--c-slate);
+  --card-bg: var(--c-white);
+  --card-border: color-mix(in srgb, var(--c-blue) 22%, var(--c-border));
+  --btn-bg: var(--c-navy);
+  --btn-fg: var(--c-white);
+  --btn-hover: var(--c-blue);
+  --accent: var(--c-blue);
+  --link: var(--c-blue);
+  --background: var(--c-ice);
+  --foreground: var(--c-ink);
+  --muted-foreground: var(--c-slate);
+  --primary: var(--c-navy);
+  --primary-foreground: var(--c-white);
+  --border: color-mix(in srgb, var(--c-blue) 22%, var(--c-border));
+  --card: var(--c-white);
+}
+
+[data-section="testimonials"] {
+  --bg: var(--c-navy);
+  --heading: var(--c-white);
+  --text: #e3ebf5;
+  --muted: var(--c-slate-light);
+  --card-bg: color-mix(in srgb, var(--c-white) 10%, transparent);
+  --card-border: color-mix(in srgb, var(--c-white) 20%, transparent);
+  --btn-bg: var(--c-amber);
+  --btn-fg: var(--c-ink);
+  --btn-hover: var(--c-amber-hover);
+  --accent: var(--c-amber);
+  --link: var(--c-white);
+  --background: var(--c-navy);
+  --foreground: var(--c-white);
+  --muted-foreground: var(--c-slate-light);
+  --primary: var(--c-cyan);
+  --border: color-mix(in srgb, var(--c-white) 20%, transparent);
+  --card: color-mix(in srgb, var(--c-white) 10%, transparent);
+  --navy: var(--c-navy);
+  --navy-foreground: var(--c-white);
+}
+
+[data-section="cta"] {
+  --bg: linear-gradient(120deg, var(--c-navy), var(--c-blue-dark));
+  --heading: var(--c-navy);
+  --text: var(--c-ink);
+  --muted: var(--c-slate);
+  --card-bg: var(--c-white);
+  --card-border: color-mix(in srgb, var(--c-white) 35%, transparent);
+  --btn-bg: var(--c-navy);
+  --btn-fg: var(--c-white);
+  --btn-hover: var(--c-blue);
+  --accent: var(--c-amber);
+  --link: var(--c-navy);
+  --background: transparent;
+  --foreground: var(--c-ink);
+  --muted-foreground: var(--c-slate);
+  --primary: var(--c-navy);
+  --primary-foreground: var(--c-white);
+  --border: color-mix(in srgb, var(--c-white) 35%, transparent);
+  --navy-foreground: var(--c-white);
+}
+
+[data-section="footer"] {
+  --bg: var(--c-ink);
+  --heading: var(--c-white);
+  --text: var(--c-slate-light);
+  --muted: #7f90a6;
+  --card-bg: color-mix(in srgb, var(--c-white) 5%, transparent);
+  --card-border: color-mix(in srgb, var(--c-white) 12%, transparent);
+  --btn-bg: var(--c-navy);
+  --btn-fg: var(--c-white);
+  --btn-hover: var(--c-blue);
+  --accent: var(--c-amber);
+  --link: var(--c-slate-light);
+  --background: var(--c-ink);
+  --foreground: var(--c-slate-light);
+  --muted-foreground: #7f90a6;
+  --primary: var(--c-cyan);
+  --border: color-mix(in srgb, var(--c-white) 12%, transparent);
+  --navy: var(--c-ink);
+  --navy-foreground: var(--c-white);
+}
+
+/* ---------- SHARED COMPONENT RULES (read section variables) ---------- */
+[data-section] {
+  background: var(--bg);
+  color: var(--text);
+}
+[data-section] h1,
+[data-section] h2,
+[data-section] h3,
+[data-section] h4 {
+  color: var(--heading);
+}
+[data-section] .text-muted {
+  color: var(--muted);
+}
+[data-section] .accent {
+  color: var(--accent);
+}
+[data-section] a:not(.btn):not([class*="button"]) {
+  color: inherit;
+}
+[data-section] .card {
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  box-shadow: 0 14px 40px -24px color-mix(in srgb, var(--c-navy) 32%, transparent);
+}
+[data-section] .card h1,
+[data-section] .card h2,
+[data-section] .card h3,
+[data-section] .card h4 {
+  color: var(--heading);
+}
+[data-section] .btn {
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  border-radius: 10px;
+  padding: 0.75rem 1.4rem;
+  font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+[data-section] .btn:hover {
+  background: var(--btn-hover);
+  color: var(--btn-fg);
+}
+[data-section] .btn-outline {
+  background: transparent;
+  color: var(--heading);
+  border: 1.5px solid var(--card-border);
+}
+[data-section] .btn-outline:hover {
+  background: color-mix(in srgb, var(--btn-hover) 12%, transparent);
+  border-color: var(--btn-hover);
+  color: var(--heading);
+}
+
+.soft-card {
+  background: var(--card-bg, var(--c-white));
+  color: var(--text, var(--c-ink));
+  border: 1px solid var(--card-border, color-mix(in srgb, var(--c-blue) 22%, var(--c-border)));
+  box-shadow: 0 18px 48px -28px color-mix(in srgb, var(--c-navy) 28%, transparent);
+}
+
+/* Surfaces & panels — colors only from Level 1 palette */
+.hero-grid {
+  background-image:
+    linear-gradient(
+      to right,
+      color-mix(in srgb, var(--c-blue) 7%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      color-mix(in srgb, var(--c-blue) 7%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: 48px 48px;
+}
+
+.hero-glow {
+  background:
+    radial-gradient(
+      ellipse 60% 60% at 82% 28%,
+      color-mix(in srgb, var(--c-cyan) 28%, transparent),
+      transparent 62%
+    ),
+    radial-gradient(
+      ellipse 45% 50% at 12% 88%,
+      color-mix(in srgb, var(--c-sky) 90%, transparent),
+      transparent 58%
+    ),
+    linear-gradient(135deg, var(--c-white) 0%, var(--c-ice) 58%, var(--c-sky) 100%);
+}
+
+.surface-mist {
+  background:
+    radial-gradient(
+      ellipse 80% 60% at 0% 0%,
+      color-mix(in srgb, var(--c-sky) 75%, transparent),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 50% 40% at 100% 100%,
+      color-mix(in srgb, var(--c-cyan) 12%, transparent),
+      transparent 50%
+    ),
+    linear-gradient(180deg, var(--c-white) 0%, var(--c-ice) 100%);
+}
+
+.surface-slate {
+  background:
+    radial-gradient(
+      ellipse 70% 50% at 100% 0%,
+      color-mix(in srgb, var(--c-cyan) 20%, transparent),
+      transparent 55%
+    ),
+    linear-gradient(165deg, var(--c-white) 0%, var(--c-ice) 48%, var(--c-sky) 100%);
+}
+
+.surface-dawn {
+  background:
+    radial-gradient(
+      ellipse 60% 45% at 15% 20%,
+      color-mix(in srgb, var(--c-cyan) 16%, transparent),
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse 55% 50% at 90% 80%,
+      color-mix(in srgb, var(--c-sky) 70%, transparent),
+      transparent 55%
+    ),
+    linear-gradient(180deg, var(--c-white) 0%, var(--c-ice) 100%);
+}
+
+.surface-ice {
+  background: linear-gradient(135deg, var(--c-ice) 0%, var(--c-white) 42%, var(--c-sky) 100%);
+}
+
+.surface-ink {
+  background:
+    radial-gradient(
+      ellipse 65% 55% at 85% 15%,
+      color-mix(in srgb, var(--c-cyan) 20%, transparent),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 45% 40% at 10% 90%,
+      color-mix(in srgb, var(--c-sky) 75%, transparent),
+      transparent 50%
+    ),
+    linear-gradient(160deg, var(--c-white) 0%, var(--c-ice) 50%, var(--c-sky) 100%);
+}
+
+.panel-glass {
+  background: color-mix(in srgb, var(--c-white) 74%, transparent);
+  border: 1px solid color-mix(in srgb, var(--c-blue) 14%, transparent);
+  box-shadow:
+    0 1px 0 color-mix(in srgb, var(--c-white) 85%, transparent) inset,
+    0 18px 40px -28px color-mix(in srgb, var(--c-navy) 18%, transparent);
+  backdrop-filter: blur(12px);
+}
+
+.panel-glass-dark {
+  background: color-mix(in srgb, var(--c-white) 80%, transparent);
+  border: 1px solid color-mix(in srgb, var(--c-blue) 16%, transparent);
+  box-shadow: 0 20px 48px -28px color-mix(in srgb, var(--c-navy) 18%, transparent);
+  backdrop-filter: blur(14px);
+}
+
+.panel-accent {
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--c-white) 96%, transparent),
+    color-mix(in srgb, var(--c-sky) 92%, transparent)
+  );
+  border: 1px solid color-mix(in srgb, var(--c-blue) 16%, transparent);
+  box-shadow: 0 16px 36px -28px color-mix(in srgb, var(--c-navy) 18%, transparent);
+}
+
+.icon-well {
+  background: linear-gradient(145deg, var(--c-white), var(--c-sky));
+  color: var(--c-blue);
+  box-shadow: 0 8px 20px -10px color-mix(in srgb, var(--c-blue) 28%, transparent);
+}
+
+.chip-glow {
+  border: 1px solid color-mix(in srgb, var(--c-blue) 22%, transparent);
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--c-cyan) 20%, transparent),
+    color-mix(in srgb, var(--c-blue) 5%, transparent)
+  );
+}
+
+.soft-card {
+  background: var(--card-bg, var(--c-white));
+  border: 1px solid var(--card-border, var(--c-border));
+  box-shadow: 0 24px 60px -36px color-mix(in srgb, var(--c-navy) 20%, transparent);
+}

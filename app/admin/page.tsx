@@ -15,7 +15,7 @@ export default function AdminLoginPage() {
   useEffect(() => {
     void fetch(`${apiUrl}/auth/me`, { credentials: "include" })
       .then((response) => {
-        if (response.ok) router.replace("/admin/projects");
+        if (response.ok) router.replace("/admin/profile");
         else setChecking(false);
       })
       .catch(() => setChecking(false));
@@ -34,7 +34,7 @@ export default function AdminLoginPage() {
       setError("Invalid email or password.");
       return;
     }
-    router.push("/admin/projects");
+    router.push("/admin/profile");
   }
 
   if (checking) {

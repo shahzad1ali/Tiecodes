@@ -21,7 +21,7 @@ export default function InsightsPage() {
         title="Notes from building logistics software"
         description="Short articles on fleet tracking, load boards, and AI that operators can use."
       />
-      <section className="surface-mist py-16 md:py-20">
+      <section data-section="solutions" className="py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <Stagger className="grid gap-5 md:grid-cols-3">
             {insights.map((post) => (

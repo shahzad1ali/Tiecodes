@@ -20,6 +20,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
+        section="stats"
         eyebrow={`About ${company.name}`}
         title={company.tagline}
         description={company.description}
@@ -27,7 +28,7 @@ export default function AboutPage() {
 
       <FounderSpotlight />
 
-      <section className="surface-ice py-16 md:py-20">
+      <section data-section="stats" className="py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
             <Reveal>
@@ -46,7 +47,7 @@ export default function AboutPage() {
             </Reveal>
 
             <Reveal delay={0.1}>
-              <div className="rounded-2xl border border-primary/20 bg-gradient-to-br from-[#1e293b] via-[#233f69] to-[#1e293b] p-6 text-navy-foreground sm:p-8">
+              <div className="card rounded-2xl p-6 bg-[color:var(--c-navy)] text-[color:var(--c-white)] sm:p-8">
                 <dl className="space-y-6">
                   <div>
                     <dt className="text-xs font-semibold tracking-wide text-primary uppercase">

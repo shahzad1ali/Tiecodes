@@ -14,12 +14,13 @@ export default function ContactPage() {
   return (
     <>
       <PageHero
+        section="solutions"
         eyebrow="Contact"
         title="Let's build something that keeps your business ahead"
         description="Share your project details and we will follow up to discuss fleet, driver, tracking, or custom software needs."
       />
 
-      <section className="surface-mist py-16 md:py-20">
+      <section data-section="solutions" className="py-16 md:py-20">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-5">
           <Reveal className="lg:col-span-2">
             <h2 className="font-heading text-xl font-semibold tracking-tight">

@@ -15,7 +15,7 @@ export default function TermsPage() {
         title="Terms of Use"
         description="Simple terms for using this marketing website."
       />
-      <section className="surface-mist py-16 md:py-20">
+      <section data-section="solutions" className="py-16 md:py-20">
         <div className="mx-auto max-w-3xl px-4 text-sm leading-relaxed text-muted-foreground sm:px-6">
           <p className="text-foreground">Last updated: September 2026</p>
           <h2 className="mt-8 font-heading text-xl font-semibold text-foreground">

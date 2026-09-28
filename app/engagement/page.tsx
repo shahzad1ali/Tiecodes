@@ -20,12 +20,13 @@ export default function EngagementPage() {
   return (
     <>
       <PageHero
+        section="engagement"
         eyebrow="Engagement"
         title="Clear models. Less friction before we talk."
         description="A rough guide to how we structure projects — so you know what to expect before “Talk to us.”"
       />
 
-      <section className="surface-mist py-16 md:py-20">
+      <section data-section="solutions" className="py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <Reveal>
             <SectionEyebrow>Models</SectionEyebrow>

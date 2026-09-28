@@ -11,7 +11,7 @@ import { company, founder } from "@/lib/content";
 
 export function FounderSpotlight() {
   return (
-    <section className="surface-mist border-y border-primary/10 py-16 md:py-20">
+    <section data-section="stats" className="border-y border-[color:var(--card-border)] py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <Reveal>
           <SectionEyebrow>Leadership</SectionEyebrow>

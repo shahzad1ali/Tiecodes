@@ -16,9 +16,9 @@ const vehicles = [
 ];
 
 const statusColor: Record<Status, string> = {
-  active: "bg-blue-100 text-blue-700 ring-1 ring-blue-200",
-  idle: "bg-amber-100 text-amber-700 ring-1 ring-amber-200",
-  offline: "bg-slate-100 text-slate-600 ring-1 ring-slate-200",
+  active: "bg-[color:var(--c-sky)] text-[color:var(--c-blue-dark)] ring-1 ring-[color:var(--c-border)]",
+  idle: "bg-[color:var(--c-amber)]/15 text-[color:var(--c-ink)] ring-1 ring-[color:var(--c-amber)]/40",
+  offline: "bg-[color:var(--c-ice)] text-[color:var(--c-slate)] ring-1 ring-[color:var(--c-border)]",
 };
 
 export function FleetDemoDashboard() {
@@ -40,7 +40,7 @@ export function FleetDemoDashboard() {
   );
 
   return (
-    <div className="overflow-hidden rounded-3xl border border-primary/15 bg-white text-foreground shadow-[0_28px_60px_-36px_rgb(37_66_102_/_0.2)]">
+    <div className="overflow-hidden rounded-3xl border border-primary/15 bg-[color:var(--card-bg)] text-[color:var(--text)] soft-card">
       <div className="flex flex-wrap items-center justify-between gap-3 border-b border-border px-5 py-4">
         <div>
           <p className="text-xs font-semibold tracking-wide text-primary uppercase">
@@ -57,7 +57,7 @@ export function FleetDemoDashboard() {
           { label: "Idle", value: counts.idle, icon: MapPin },
           { label: "Offline", value: counts.offline, icon: Radio },
         ].map((stat) => (
-          <div key={stat.label} className="rounded-2xl border border-border bg-slate-50 p-4 shadow-sm">
+          <div key={stat.label} className="rounded-2xl border border-border bg-[color:var(--c-ice)] p-4 shadow-sm">
             <div className="flex items-center gap-3">
               <stat.icon className="size-5 text-primary" />
               <div>
@@ -80,7 +80,7 @@ export function FleetDemoDashboard() {
                 className={`rounded-full px-3 py-1.5 text-xs font-medium capitalize transition-colors ${
                   filter === key
                     ? "bg-primary text-primary-foreground"
-                    : "bg-slate-100 text-muted-foreground hover:bg-blue-50 hover:text-primary"
+                    : "bg-[color:var(--c-ice)] text-muted hover:bg-[color:var(--c-sky)] hover:text-[color:var(--accent)]"
                 }`}
               >
                 {key}
@@ -91,7 +91,7 @@ export function FleetDemoDashboard() {
             {filtered.map((v) => (
               <li
                 key={v.id}
-                className="flex items-center justify-between gap-3 rounded-xl border border-border bg-slate-50 px-3 py-3"
+                className="flex items-center justify-between gap-3 rounded-xl border border-border bg-[color:var(--c-ice)] px-3 py-3"
               >
                 <div>
                   <p className="font-heading text-sm font-semibold">{v.id}</p>
@@ -110,21 +110,21 @@ export function FleetDemoDashboard() {
           </ul>
         </div>
 
-        <div className="relative min-h-56 overflow-hidden rounded-2xl border border-primary/20 bg-[#eef6ff]">
+        <div className="relative min-h-56 overflow-hidden rounded-2xl border border-primary/20 bg-[color:var(--c-sky)]">
           <svg viewBox="0 0 400 260" className="h-full w-full" aria-hidden>
             <path
               d="M30 200 C90 80, 150 220, 210 110 S310 60, 370 120"
-              stroke="#2563C7"
+              stroke="var(--c-blue)"
               strokeWidth="2.5"
               fill="none"
               strokeDasharray="8 8"
             />
-            <circle cx="30" cy="200" r="6" fill="#F0A64F" />
-            <circle cx="370" cy="120" r="6" fill="#2563C7" />
+            <circle cx="30" cy="200" r="6" fill="var(--c-amber)" />
+            <circle cx="370" cy="120" r="6" fill="var(--c-blue)" />
             {!reduce && (
               <motion.circle
                 r="7"
-                fill="#2563C7"
+                fill="var(--c-blue)"
                 animate={{
                   offsetDistance: ["0%", "100%"],
                 }}
@@ -136,7 +136,7 @@ export function FleetDemoDashboard() {
               />
             )}
           </svg>
-          <p className="absolute bottom-3 left-3 text-[10px] tracking-wide text-slate-500 uppercase">
+          <p className="absolute bottom-3 left-3 text-[10px] tracking-wide text-[color:var(--c-slate)] uppercase">
             Route preview
           </p>
         </div>

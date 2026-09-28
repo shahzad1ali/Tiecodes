@@ -37,11 +37,11 @@ const ToastContext = createContext<ToastContextValue | null>(null);
 
 const toneStyles: Record<ToastTone, string> = {
   success:
-    "border-emerald-500/40 bg-emerald-50 text-emerald-950 shadow-emerald-500/10",
+    "border-[color:var(--c-success)]/40 bg-[color:var(--c-success-soft)] text-[color:var(--c-ink)] shadow-[color:var(--c-success)]/10",
   error:
-    "border-destructive/40 bg-red-50 text-red-950 shadow-destructive/10",
+    "border-[color:var(--c-danger)]/40 bg-[color:var(--c-danger)]/10 text-[color:var(--c-ink)] shadow-[color:var(--c-danger)]/10",
   info:
-    "border-primary/35 bg-secondary text-secondary-foreground shadow-primary/10",
+    "border-[color:var(--c-blue)]/35 bg-[color:var(--c-sky)] text-[color:var(--c-navy)] shadow-[color:var(--c-blue)]/10",
 };
 
 const toneIcon: Record<ToastTone, typeof CheckCircle2> = {
@@ -51,21 +51,23 @@ const toneIcon: Record<ToastTone, typeof CheckCircle2> = {
 };
 
 const toneIconClass: Record<ToastTone, string> = {
-  success: "text-emerald-600",
-  error: "text-destructive",
-  info: "text-primary",
+  success: "text-[color:var(--c-success)]",
+  error: "text-[color:var(--c-danger)]",
+  info: "text-[color:var(--c-blue)]",
 };
 
 const toneDescriptionClass: Record<ToastTone, string> = {
-  success: "text-emerald-800/75",
-  error: "text-red-800/75",
-  info: "text-secondary-foreground/70",
+  success: "text-[color:var(--c-success)]/80",
+  error: "text-[color:var(--c-danger)]/80",
+  info: "text-[color:var(--c-slate)]",
 };
 
 const toneCloseClass: Record<ToastTone, string> = {
-  success: "text-emerald-700/70 hover:bg-emerald-100 hover:text-emerald-950",
-  error: "text-red-700/70 hover:bg-red-100 hover:text-red-950",
-  info: "text-primary/70 hover:bg-primary/10 hover:text-primary",
+  success:
+    "text-[color:var(--c-success)]/70 hover:bg-[color:var(--c-success-soft)] hover:text-[color:var(--c-ink)]",
+  error:
+    "text-[color:var(--c-danger)]/70 hover:bg-[color:var(--c-danger)]/10 hover:text-[color:var(--c-ink)]",
+  info: "text-[color:var(--c-blue)]/70 hover:bg-[color:var(--c-sky)] hover:text-[color:var(--c-blue)]",
 };
 
 export function ToastProvider({ children }: { children: React.ReactNode }) {

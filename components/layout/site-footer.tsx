@@ -5,26 +5,26 @@ import { Separator } from "@/components/ui/separator";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-white/10 bg-navy text-navy-foreground">
+    <footer data-section="footer" className="border-t border-[color:var(--card-border)]">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-4">
         <div className="md:col-span-1">
           <Logo href="/" size="md" showTagline variant="on-dark" />
-          <p className="mt-4 text-sm leading-relaxed text-navy-foreground/65">
+          <p className="text-muted mt-4 text-sm leading-relaxed">
             Custom software for fleet, GPS, drivers, and logistics — built in{" "}
             {company.location}.
           </p>
         </div>
 
         <div>
-          <h3 className="font-heading text-sm font-semibold tracking-wide text-primary">
+          <h3 className="accent font-heading text-sm font-semibold tracking-wide">
             Explore
           </h3>
-          <ul className="mt-4 space-y-2 text-sm text-navy-foreground/70">
+          <ul className="text-muted mt-4 space-y-2 text-sm">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="cursor-pointer transition-colors hover:text-primary"
+                  className="cursor-pointer transition-colors hover:text-[color:var(--btn-hover)]"
                 >
                   {link.label}
                 </Link>
@@ -34,15 +34,15 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <h3 className="font-heading text-sm font-semibold tracking-wide text-primary">
+          <h3 className="accent font-heading text-sm font-semibold tracking-wide">
             Solutions
           </h3>
-          <ul className="mt-4 space-y-2 text-sm text-navy-foreground/70">
+          <ul className="text-muted mt-4 space-y-2 text-sm">
             {solutions.map((s) => (
               <li key={s.slug}>
                 <Link
                   href={`/solutions/${s.slug}`}
-                  className="cursor-pointer transition-colors hover:text-primary"
+                  className="cursor-pointer transition-colors hover:text-[color:var(--btn-hover)]"
                 >
                   {s.title}
                 </Link>
@@ -52,14 +52,14 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <h3 className="font-heading text-sm font-semibold tracking-wide text-primary">
+          <h3 className="accent font-heading text-sm font-semibold tracking-wide">
             Company
           </h3>
-          <ul className="mt-4 space-y-2 text-sm text-navy-foreground/70">
+          <ul className="text-muted mt-4 space-y-2 text-sm">
             <li>
               <a
                 href={`mailto:${company.email}`}
-                className="cursor-pointer transition-colors hover:text-primary"
+                className="cursor-pointer transition-colors hover:text-[color:var(--btn-hover)]"
               >
                 {company.email}
               </a>
@@ -68,7 +68,7 @@ export function SiteFooter() {
               <li key={phone}>
                 <a
                   href={`tel:${phone.replace(/\s/g, "")}`}
-                  className="cursor-pointer transition-colors hover:text-primary"
+                  className="cursor-pointer transition-colors hover:text-[color:var(--btn-hover)]"
                 >
                   {phone}
                 </a>
@@ -78,7 +78,7 @@ export function SiteFooter() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="cursor-pointer transition-colors hover:text-primary"
+                  className="cursor-pointer transition-colors hover:text-[color:var(--btn-hover)]"
                 >
                   {link.label}
                 </Link>
@@ -89,7 +89,7 @@ export function SiteFooter() {
                 href={company.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="cursor-pointer transition-colors hover:text-primary"
+                className="cursor-pointer transition-colors hover:text-[color:var(--btn-hover)]"
               >
                 LinkedIn
               </a>
@@ -98,8 +98,8 @@ export function SiteFooter() {
         </div>
       </div>
 
-      <Separator className="bg-white/10" />
-      <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-6 text-xs text-navy-foreground/50 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+      <Separator className="bg-[color:var(--card-border)]" />
+      <div className="text-muted mx-auto flex max-w-6xl flex-col gap-2 px-4 py-6 text-xs sm:flex-row sm:items-center sm:justify-between sm:px-6">
         <p>
           © {new Date().getFullYear()} {company.name}. All rights reserved.
         </p>

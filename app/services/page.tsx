@@ -22,12 +22,13 @@ export default function ServicesPage() {
   return (
     <>
       <PageHero
+        section="services"
         eyebrow="Services"
         title="Software development that moves with your business"
         description="From logistics-heavy operations to everyday business apps, we turn complex challenges into simple, powerful software."
       />
 
-      <section className="surface-mist py-16 md:py-20">
+      <section data-section="services" className="py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <Reveal>
             <SectionEyebrow>What we build</SectionEyebrow>
@@ -60,7 +61,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="surface-dawn border-y border-primary/10 py-16 md:py-20">
+      <section data-section="process" className="border-y border-[color:var(--card-border)] py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <Reveal>
             <SectionEyebrow>Core practice</SectionEyebrow>
@@ -69,7 +70,7 @@ export default function ServicesPage() {
           <Stagger className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {capabilities.map((item) => (
               <StaggerItem key={item.title}>
-                <div className="panel-accent h-full rounded-2xl border-l-4 border-l-primary p-5">
+                <div className="h-full rounded-2xl border-l-4 border-l-primary p-5">
                   <h3 className="font-heading text-base font-semibold">{item.title}</h3>
                   <p className="mt-2 text-sm text-muted-foreground">{item.description}</p>
                 </div>
@@ -79,7 +80,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="surface-ink py-16 text-foreground md:py-20">
+      <section data-section="stats" className="py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <Reveal>
             <SectionEyebrow>Stack</SectionEyebrow>

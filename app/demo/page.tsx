@@ -14,11 +14,12 @@ export default function DemoPage() {
   return (
     <>
       <PageHero
+        section="solutions"
         eyebrow="Demo"
         title="Try a fleet overview experience"
         description="Filter vehicles, scan statuses, and watch a simulated route — a taste of the tracking products we build."
       />
-      <section className="surface-mist py-16 md:py-20">
+      <section data-section="solutions" className="py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <Reveal>
             <FleetDemoDashboard />

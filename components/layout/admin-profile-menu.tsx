@@ -1,12 +1,14 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useRouter } from "next/navigation";
-import { LogOut, UserRound } from "lucide-react";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
+import { FolderKanban, LogOut, UserRound } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export function AdminProfileMenu() {
   const router = useRouter();
+  const pathname = usePathname();
   const [email, setEmail] = useState("");
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
@@ -68,13 +70,41 @@ export function AdminProfileMenu() {
         >
           <div className="border-b border-border px-3 py-3">
             <p className="text-[11px] font-semibold tracking-[0.14em] text-muted-foreground uppercase">
-              Profile
+              Signed in
             </p>
             <p className="mt-1 flex items-start gap-2 text-sm font-medium break-all text-foreground">
               <UserRound className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden />
               {email || "Admin"}
             </p>
           </div>
+          <Link
+            href="/admin/profile"
+            role="menuitem"
+            onClick={() => setOpen(false)}
+            className={cn(
+              "flex w-full cursor-pointer items-center gap-2 px-3 py-2.5 text-sm font-medium transition-colors hover:bg-muted",
+              pathname.startsWith("/admin/profile")
+                ? "bg-muted text-primary"
+                : "text-foreground"
+            )}
+          >
+            <UserRound className="size-4" aria-hidden />
+            Profile
+          </Link>
+          <Link
+            href="/admin/projects"
+            role="menuitem"
+            onClick={() => setOpen(false)}
+            className={cn(
+              "flex w-full cursor-pointer items-center gap-2 border-b border-border px-3 py-2.5 text-sm font-medium transition-colors hover:bg-muted",
+              pathname.startsWith("/admin/projects")
+                ? "bg-muted text-primary"
+                : "text-foreground"
+            )}
+          >
+            <FolderKanban className="size-4" aria-hidden />
+            Projects
+          </Link>
           <button
             type="button"
             role="menuitem"

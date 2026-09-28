@@ -9,7 +9,7 @@ import type { Solution } from "@/lib/content";
 export function SolutionDetail({ solution }: { solution: Solution }) {
   return (
     <>
-      <section className="surface-slate relative overflow-hidden border-b border-primary/15 py-16 text-foreground md:py-20">
+      <section data-section="solutions" className="relative overflow-hidden border-b border-[color:var(--card-border)] py-16 text-foreground md:py-20">
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
           <Reveal>
             <Link
@@ -37,7 +37,7 @@ export function SolutionDetail({ solution }: { solution: Solution }) {
         </div>
       </section>
 
-      <section className="surface-mist py-16 md:py-20">
+      <section data-section="solutions" className="py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <Reveal>
             <p className="text-sm font-semibold tracking-[0.14em] text-primary uppercase">
@@ -65,7 +65,7 @@ export function SolutionDetail({ solution }: { solution: Solution }) {
         </div>
       </section>
 
-      <section className="surface-dawn border-t border-primary/10 py-16 md:py-20">
+      <section data-section="process" className="border-t border-[color:var(--card-border)] py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <Reveal>
             <p className="text-sm font-semibold tracking-[0.14em] text-primary uppercase">
